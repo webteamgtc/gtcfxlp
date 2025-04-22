@@ -18,6 +18,8 @@ const Language = (props) => {
   const location = useContext(LocationContext);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
+  
+
   useEffect(() => {
     if (
       (location?.country_code == "MY" ||
