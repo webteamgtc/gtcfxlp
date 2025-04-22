@@ -1,0 +1,286 @@
+{
+  "home": {
+    "metaData": {
+      "title": "與 #1 STP 經紀商 GTCFX 一起在線交易外匯與 CFD",
+      "des": "與 #1 STP 經紀商 GTCFX 一起在線交易外匯、股票、能源、股指和貴金屬，享受緊縮的點差、超快的執行等優勢。立即交易！"
+    }
+  },
+  "about": {
+    "metaData": {
+      "title": "公司簡介 | GTCFX",
+      "des": "GTCFX 是您全球資產最佳的外匯交易經紀商。我們致力於為您的交易需求提供卓越的服務。點擊此處了解更多。"
+    },
+    "why-gtc-group": {
+      "metaData": {
+        "title": "為何選擇 | GTCFX",
+        "des": "開啟盈利機遇：您最佳的投資旅程從我們開始。點擊此處了解更多"
+      }
+    },
+    "gtc-regulations": {
+      "metaData": {
+        "title": "法規與認證 | GTCFX",
+        "des": "在 GTCFX，我們遵守金融機構的規範，以維護我們的可信度和透明度。點擊此處了解更多有關我們認證的信息"
+      }
+    },
+    "global-presence": {
+      "metaData": {
+        "title": "我們的全球業務 | GTCFX",
+        "des": "在 GTC，我們是一支全球化的團隊，業務遍及全球超過 16 個地點。無論是繁華的都市還是偏遠的角落，我們多元化的網絡使我們能夠與全球客戶建立聯繫。"
+      }
+    },
+    "awards": {
+      "metaData": {
+        "title": "獲獎榮譽 | GTCFX"
+      }
+    },
+    "company-news": {
+      "title": "GTCFX 最新消息",
+      "sub_title": "隨時掌握最新的公司動態和更新。了解並閱讀GTC最新的所有消息，敬請關注我們的公司新聞專區。"
+    },
+    "careers": {
+      "metaData": {
+        "title": "職涯 | GTCFX",
+        "des": "我們是領先的金融科技公司，專注於外匯交易解決方案。在GTCFX，我們致力於打造一個充滿活力且包容的工作環境，在這裡創新得以蓬勃發展，並且人才得到培養。"
+      }
+    },
+    "contact-us": {
+      "metaData": {
+        "title": "聯繫我們 | GTCFX",
+        "des": "我們的團隊致力於超越您的期望，滿足您的需求。無論是解答您的疑慮、協助您解決技術問題，還是提供專業指導，我們都在這裡為您服務。"
+      }
+    }
+  },
+  "accounts": {
+    "live-account": {
+      "metaData": {
+        "title": "開設真實交易帳戶 | GTCFX",
+        "des": "立即快速開設您的 GTCFX 真實交易帳戶。在專家的指導下探索外匯、差價合約和見解。您的成功從這裡開始！"
+      }
+    },
+    "deposit": {
+      "metaData": {
+        "title": "為您的帳戶充值 | GTCFX",
+        "des": "用最輕鬆的方式為您的帳戶充值。探索外匯、差價合約和專家指導的見解。您的成功從這裡開始！"
+      }
+    },
+    "account_types": {
+      "metaData": {
+        "title": "帳戶類型 | GTCFX",
+        "des": "通過開設真實帳戶並交易我們具有競爭力的金融產品，利用最有利的點差來解鎖利潤潛力。"
+      }
+    }
+  },
+  "Instruments": {
+    "commonTabs": {
+      "forex": "外匯",
+      "metals": "貴金屬",
+      "energy": "活力",
+      "stocks": "股票",
+      "indices": "股票指數",
+      "shares": "分享",
+      "commodities": "原料"
+    },
+    "metaDetails": {
+      "forex": {
+        "title": "與 GTCFX 一起交易外匯",
+        "des": "外匯交易，簡稱外匯（FX）交易，是指在外匯市場上買賣貨幣，旨在從貨幣匯率波動中獲利。"
+      },
+      "energy": {
+        "title": "交易能源",
+        "des": "在我們這裡交易能源市場，體驗競爭優勢。"
+      },
+      "shares": {
+        "title": "交易股票",
+        "des": "通過添加一些最具代表性的全球品牌股票，如蘋果、特斯拉、Netflix 等，來多元化您的投資組合。"
+      },
+      "stock": {
+        "title": "交易股票",
+        "des": "我們的交易平台提供盈利優勢，讓您能夠在市場波動中利用股票價格上漲和下跌的機會。"
+      },
+      "commodities": {
+        "title": "交易商品",
+        "des": "與我們一起交易商品，開啟無限機會，並提供所需的工具、支持和安全性，讓您在這個動態市場中蓬勃發展。"
+      },
+      "indices": {
+        "title": "交易股指",
+        "des": "開啟一個充滿盈利機會的世界，與我們一起交易現金股指，提供所需的工具和市場接入，為您帶來有利可圖的交易體驗。"
+      },
+      "metals": {
+        "title": "交易貴金屬",
+        "des": "通過我們極具競爭力的黃金點差（起始僅為 4 美分），最大化您的盈利潛力。"
+      }
+    }
+  },
+  "platform": {
+    "mt4PlatformPage": {
+      "metaData": {
+        "title": "MetaTrader 4平台 ► 適用於Windows、Mac、iOS和Android的MT4下載 | GTCFX",
+        "des": "下載GTCFX提供的MetaTrader 4（MT4），適用於Windows、Mac、iOS和Android 📈 使用GTCFX的Meta Trader 4交易外匯、股票指數、大宗商品、債券和數字貨幣資產的差價合約。立即開設MT4賬戶！"
+      }
+    },
+    "mt5PlatformPage": {
+      "metaData": {
+        "title": "MetaTrader 5平台 ► 適用於Windows、Mac、iOS和Android的MT5下載 | GTCFX",
+        "des": "下載GTCFX提供的MetaTrader 5（MT5），適用於Windows、Mac、iOS和Android 📈 使用GTCFX的MetaTrader 5交易外匯、股票指數、大宗商品、債券和數字貨幣資產的差價合約。立即開設MT4賬戶！"
+      }
+    },
+    "glossary": {
+      "metaData": {
+        "title": "詞彙表/常見問題 - GTCFX",
+        "des": "在這裡，您將找到一個全面的術語和常見問題列表，幫助您更好地理解我們的服務和交易環境。"
+      }
+    }
+  },
+  "tradingTools": {
+    "economicCal": {
+      "metaData": {
+        "title": "經濟日曆 | GTCFX",
+        "des": "GTC外匯的實時經濟日曆涵蓋來自全球的金融事件和指標。當有新數據發布時，它會自動更新。"
+      }
+    },
+    "latestNews": {
+      "metaData": {
+        "title": "最新消息 | GTCFX",
+        "des": "Global Trade Capital Limited是一家致力於線上商品和外匯經紀公司的全球品牌。點擊此處立即閱讀我們的最新消息！"
+      }
+    },
+    "ecoNews": {
+      "metaData": {
+        "title": "經濟新聞推送 | GTCFX",
+        "des": "通過 GTCFX 獲取全球主要金融事件的實時股票新聞、外匯新聞和綜合新聞。立即開始做出明智的決策！"
+      }
+    },
+    "marketOverView": {
+      "metaData": {
+        "title": "市場概況新聞| GTCFX",
+        "des": "隨時了解最新的公司更新和評論。在我們的公司新聞部分隨時了解並閱讀 GTCFX 發生的一切。"
+      }
+    }
+  },
+  "lervage": {
+    "metaData": {
+      "title": "增強交易的動態槓桿 | GTCFX",
+      "des": "了解 GTCFX 的動態槓桿模型，旨在優化您在外匯、貴金屬、指數、大宗商品、股票、能源和數字貨幣資產等市場中的交易體驗。通過量身定制的槓桿解決方案，最大化您的交易潛力。"
+    }
+  },
+  "partner": {
+    "IBProgram": {
+      "metaData": {
+        "title": "介紹經紀商計劃 | GTCFX",
+        "des": "通過 GTCFX 的介紹經紀商計劃，解鎖您的財務潛力。加入我們的網絡，賺取吸引人的佣金。今天就開始您的交易之旅！"
+      }
+    },
+    "metaData": {
+        "title": "聯盟計劃 | GTCFX",
+        "des": "通過 GTCFX 聯盟計劃探索在線賺取豐厚佣金的潛力。點擊此處了解更多。"
+      }
+  },
+  "footerPage": {
+    "clientAgreement": {
+      "metaData": {
+        "title": "客戶協議| GTCFX",
+        "des": "GTCFX 遵守金融當局的規定，以保持信譽和透明度。按一下以了解有關我們的客戶協議的更多資訊。"
+      }
+    },
+    "restrictedCountry": {
+      "metaData": {
+        "title": "受限制的國家 | GTCFX",
+        "des": "在此網站上，您可以找到 GTC Global Ltd. 不提供洗錢/金融時報風險服務的國家清單。點擊了解更多！"
+      }
+    },
+    "riskWarning": {
+      "metaData": {
+        "title": "風險提示| GTCFX",
+        "des": "差價合約是複雜的工具，並且由於槓桿作用而具有快速虧損的高風險。在您開始交易 GTCFX 之前，請閱讀本頁。"
+      }
+    },
+    "termsCondition": {
+      "metaData": {
+        "title": "條款與細則| GTCFX",
+        "des": "在使用我們的服務之前，請閱讀 GTCFX 條款和條件。按此了解 GTCFX 如何管理資料來源、隱私、安全性等。"
+      }
+    },
+    "privacyPolicy": {
+      "metaData": {
+        "title": "隱私權政策 | GTCFX",
+        "des": "在GTCFX，您的隱私對我們非常重要，我們的首要任務是維護和保護與個人相關的所有機密資訊。了解更多！"
+      }
+    },
+    "withDrawal": {
+      "metaData": {
+        "title": "提款政策 | GTCFX",
+        "des": "在GTCFX，我們致力於讓提款變得快速、方便和輕鬆，同時提供眾多支付系統可供選擇。點擊了解更多！"
+      }
+    },
+    "CompliancePolicy": {
+      "metaData": {
+        "title": "KYC/合規政策 | GTCFX",
+        "des": "在GTCFX，我們擁有一支專業的法律團隊，負責風險管理並確保法律得到執行，以維護我們交易者的利益。了解更多。"
+      }
+    },
+    "RefundPolicy": {
+      "metaData": {
+        "title": "押金和退款政策 | GTCFX",
+        "des": "GTC 根據執行政策定期提供存款和退款條件，您在將資金存入您的帳戶之前應了解這些條件。了解更多。"
+      }
+    },
+    "DuePolicy": {
+      "metaData": {
+        "title": "盡職調查| GTCFX",
+        "des": "在GTCFX，我們確保客戶經歷最小的投資風險，透過徹底的投資盡職調查做出更好的投資決策。了解更多。"
+      }
+    }
+  },
+  "prime-tech": {
+    "liquidity": {
+      "metaData": {
+        "title": "GTC Prime | 同行領先的流動性 | 交易 | 全球交易社群的風險解決方案",
+        "des": "GTC Prime 擁有先進的基礎設施和全面的專業知識，提供來自一級銀行的定制定價並支持DMA執行。"
+      }
+    },
+    "socialTranding": {
+      "metaData": {
+        "title": "GTCFX",
+        "des": "GTCFX 提供的最佳複製交易平台，您可以輕鬆複製頂尖交易員的操作，讓我們的系統自動為您運行 ✅ 現在就開始複製交易吧！"
+      }
+    },
+    "pamm": {
+      "metaData": {
+        "title": "PAMM帳戶 | GTCFX",
+        "des": "本頁包含有關PAMM帳戶及其對投資者和資金管理人的優勢的資訊。"
+      }
+    },
+    "mam": {
+      "metaData": {
+        "title": "MAM 帳戶 | GTCFX",
+        "des": "MAM（多帳戶管理）帳戶是外匯交易中的一種專門投資工具，旨在讓專業交易員"
+      }
+    },
+    "socialCentreTool": {
+      "metaData": {
+        "title": "使用Signal Centre工具獲取市場洞察 | GTCFX",
+        "des": "使用 GTCFX 的 Signal Centre 工具獲取每日交易點子和見解。節省時間和精力，獲取進場和止損點位。立即下載，提升您的交易水平。"
+      }
+    },
+    "vpsHosting": {
+      "metaData": {
+        "title": "強大的虛擬私人伺服器 | GTCFX",
+        "des": "VPS 是一種遠端託管服務，為 MT4、MT5 平台提供環境，以確保低延遲交易體驗"
+      }
+    },
+    "technicalTool": {
+     "metaData": {
+        "title": "專業技術分析與投資決策工具",
+        "des": "GTCFX 提供強大的技術分析和投資決策工具，幫助您充分利用您的交易。點擊此處了解更多。"
+      }
+    }
+  },
+  "compaign": {
+    "tradeWin": {
+      "metaData": {
+        "title": "交易以贏得 - 客戶促銷 | GTCFX",
+        "des": "GTC為喜愛交易的客戶提供豐厚獎品。進行更多交易並贏取令人興奮的獎品。適用條款及細則！"
+      }
+    }
+  }
+}
