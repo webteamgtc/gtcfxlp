@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import Banner from "../components/account/LiveDemo/Banner";
 import MainForm from "../free-demo-account/form";
 import LocationContextProvider from "@/context/location-context";
-import WhyChooseIcon from "../free-demo-account/whyChooseUs";
+import WhyChooseIcon from "../free-demo-account/whycChooseUs";
 
 
 const DemoAccountPage = () => {

@@ -56,16 +56,7 @@ const kufi = localFont({
 export function generateStaticParams() {
   return [
     { locale: "en" },
-    { locale: "zh-hans" },
-    { locale: "ar-AE" },
-    { locale: "ms-MY" },
-    { locale: "hi-IN" },
-    { locale: "id-ID" },
-    { locale: "fr-FR" },
-    { locale: "es-ES" },
-    { locale: "vi-VN" },
-    { locale: "fa-IR" },
-    { locale: "ja-JP" },
+ 
   ];
 }
 
@@ -74,7 +65,7 @@ export default async function LocaleLayout({ children, params }) {
   const { locale } = params;
   let messages;
   try {
-    messages = (await import(`../../messages/${locale}.json`)).default;
+    messages = (await import(`../../messages/en.json`)).default;
   } catch (error) {
     notFound();
   }

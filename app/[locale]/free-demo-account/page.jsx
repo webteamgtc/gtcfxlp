@@ -3,11 +3,11 @@ import React from "react";
 import DemoAccountPage from "../pages/DemoAccount";
 
 export async function generateMetadata({ params: { locale } }) {
-  const messages = (await import(`../../../messages/${locale}.json`)).default;
+  const messages = (await import(`../../../messages/en.json`)).default;
   const t = createTranslator({ locale, messages });
   const url =
   locale != "en"
-    ? `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/free-demo-account`
+    ? `${process.env.NEXT_PUBLIC_BASE_URL}/en/free-demo-account`
     : `${process.env.NEXT_PUBLIC_BASE_URL}/free-demo-account`;
 
 

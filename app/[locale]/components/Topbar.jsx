@@ -3,7 +3,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next-intl/client";
 import Link from "next-intl/link";
 import { MdOutlineLogin } from "react-icons/md";
-import Language from "./Language";
+// import Language from "./Language";
 import { useLocationDetail } from "@/context/useLocationDetail";
 
 const TopBar = ({ currentLanguage, isAr, href }) => {
@@ -72,7 +72,7 @@ const TopBar = ({ currentLanguage, isAr, href }) => {
                             {t("tobbar.rgister")}
                         </Link>
                     </div>
-                    <Language href={href} currentLanguage={currentLanguage}/>
+                    {/* <Language href={href} currentLanguage={currentLanguage}/> */}
                 </div>
             </div>
         </section>

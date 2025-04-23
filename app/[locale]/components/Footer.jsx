@@ -2,8 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
-import SocialIcon from "./SocialIcon";
-import CopyRight from "./CopyRight";
 import Link from "next-intl/link";
 import { BsTelephoneFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
@@ -11,7 +9,6 @@ import { FaEnvelopeOpenText } from "react-icons/fa";
 import { AiFillClockCircle } from "react-icons/ai";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next-intl/client";
-import TradeInvest from "./about/TradeInvest";
 
 const Footer = () => {
   const t = useTranslations("footerLink");
@@ -222,7 +219,6 @@ const Footer = () => {
   const isNotHomePage = pathname !== `/${locale}` && pathname !== "/";
   return (
     <>
-      {isNotHomePage && <TradeInvest />}
       <div
         className={`bg-primary pb-10 z-30 ${isNotHomePage ? "pt-[8%] sm:pt-[18%] lg:pt-[16%] xl:pt-[12%] 2xl:pt-[10%] 3xl:pt-[9%] 4xl:pt-[6%]" : "pt-10"}`}
       >
@@ -292,7 +288,6 @@ const Footer = () => {
                 className="mx-auto md:m-0"
               />
             </Link>
-            <SocialIcon />
             <div className="flex flex-row py-5 justify-center">
               <Image
                 src="/footer/iso9001_icon.png"
@@ -350,17 +345,16 @@ const Footer = () => {
               </span>
               {t("footerNotice.fifthPara")} <a className="text-secondary" href="https://gtcau.com.au/" target="_blank">www.gtcau.com.au.  </a>
             </p>
-          
-           
+
+
             <p>
-            
+
               {t("footerNotice.eightPara")}{" "}
             </p>
-         
+
           </div>
         </div>
       </div>
-      <CopyRight />
     </>
   );
 };

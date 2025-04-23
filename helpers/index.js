@@ -35,25 +35,7 @@ export const convertToDesiredLocale = (locale) => {
     const localeMap = {
         "ar-AE": "ar",
         "zh-hans": "zh",
-        "zh-TW": "zh",
-        "ms-MY": "ms",
-        "tr-TR": "tr",
-        "ur-PK": "ur",
-        "hi-IN": "hi",
-        "id-ID": "id",
-        "fr-FR": "fr",
-        "es-ES": "es",
-        "pt-PT": "pt",
-        "vi-VN": "vi",
-        "fa-IR": "fa",
-        "tl-PH": "tl",
-        "th-TH": "th",
-        "ru_RU": "ru",
-        "ja-JP": "ja",
-        "ko-KR": "ko",
-        "ps-AF": "ps",
-        "it-IT": "it",
-        "ml_IN": "ml",
+
     };
 
     // Return mapped locale or normalized language code

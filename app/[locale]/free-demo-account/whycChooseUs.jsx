@@ -10,7 +10,6 @@ const Counter = ({ start, end, prefix = "", suffix = "", label }) => {
   const { locale } = router;
 
   // Adjust value dynamically based on locale
-  const dynamicEndValue = locale === "zh-hans" || locale === "zh-TW" ? 1350 : 135;
 
   useEffect(() => {
     let frameRate = 1000 / 60; // 60 FPS
@@ -48,14 +47,14 @@ const WhyChooseIcon = () => {
   const { locale } = router;
 
   // Adjust value dynamically based on locale
-  const dynamicEndValue = locale === "zh-hans" || locale === "zh-TW" ? 1350 : 135;
-   // Adjust dollar sign position based on locale
-   const prefix = locale === "zh-hans" || locale === "zh-TW" ? "" : "$";
-   const suffix = locale === "zh-hans" || locale === "zh-TW" ? "$" : t("fact_no4");
+  const dynamicEndValue = 135;
+  // Adjust dollar sign position based on locale
+  const prefix = "$";
+  const suffix = t("fact_no4");
 
   const counters = [
-    { start: 0, end: 985000, label: t("fact_desc1"), suffix: ""},
-    { start: 0, end: 27000, label: t("fact_desc2"),  suffix: ""},
+    { start: 0, end: 985000, label: t("fact_desc1"), suffix: "" },
+    { start: 0, end: 27000, label: t("fact_desc2"), suffix: "" },
     {
       start: 0,
       end: 20,
@@ -63,7 +62,7 @@ const WhyChooseIcon = () => {
       suffix: t("fact_no3"),
       label: t("fact_desc3"),
     },
-   {
+    {
       start: 0,
       end: dynamicEndValue, // Dynamically set based on locale
       prefix: prefix, // Dynamic prefix based on locale
