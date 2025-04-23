@@ -1,7 +1,6 @@
 "use client";
 import LocationContextProvider from "@/context/location-context";
 import { useTranslations } from "next-intl";
-import LiveAccountNew from "../components/account/LiveDemo/LiveAccountNew";
 import AssesAsset from "../components/home/AssesAsset";
 import { TiTick } from "react-icons/ti";
 import WhyChooseIcon from "../components/about/WhyChooseIcon";
@@ -70,7 +69,7 @@ const LiveAccountPage = () => {
   return (
     <>
       <LocationContextProvider>
-        <LiveAccountNew />
+     
         <AssesAsset assetData={assetData} title={t("heading")} columns={4} />
         <section className="top-content pb-32 sm:pb-52 2xl:pb-48 3xl:pb-36 relative z-30">
           <div className="container">
