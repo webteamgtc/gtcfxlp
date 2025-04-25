@@ -724,9 +724,7 @@ body > section.container > div > div:nth-child(1) > div > div:nth-child(8) > svg
     linear-gradient(180deg, #ffffff 0%, #ffffff 75%, #f1f2f6 100%) 0% 0%
     no-repeat padding-box;
 }
-section.demo-account input.PhoneInputInput {
-  background: #f3f4f6 !important;
-}
+
 .shine-button {
   position: relative;
   overflow: hidden;

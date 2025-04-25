@@ -220,64 +220,10 @@ const Footer = () => {
   return (
     <>
       <div
-        className={`bg-primary pb-10 z-30 ${isNotHomePage ? "pt-[8%] sm:pt-[18%] lg:pt-[16%] xl:pt-[12%] 2xl:pt-[10%] 3xl:pt-[9%] 4xl:pt-[6%]" : "pt-10"}`}
+        className={`bg-primary pb-10 z-30`}
       >
-        <div className="container grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-8 px-3">
-          {footerLinks.map((footerlink) => (
-            <div key={footerlink.title}>
-              <h4 className="font-regular pb-2 text-secondary text-base underline-offset-1 ">
-                {footerlink.title}
-              </h4>
-              <hr className="w-8 h-[1px] bg-white border-0"></hr>
-              <ul className="list-none mt-4">
-                {footerlink.links.map((link, index) => {
-                  const activeClass =
-                    pathnameWithoutLocale == link?.link
-                      ? "text-secondary"
-                      : "text-white";
-                  if (
-                    locale == "zh-hans" &&
-                    (link?.name == t("update.menu1") ||
-                      link?.name == t("update.menu5"))
-                  ) {
-                    return null;
-                  }
-                  return (
-                    <li
-                      key={link.name}
-                      className={`${activeClass} text-sm font-normal leading-6 hover:text-secondary cursor-pointer flex justify-start items-center gap-2`}
-                      onClick={() => {
-                        router.push(link.link, { locale: locale });
-                      }}
-                    >
-                      {link.name}
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          ))}
-          <div className="contact group">
-            <h4 className="font-regular pb-2 text-secondary text-base underline-offset-1">
-              {contact[0].title}
-            </h4>
-            <hr className="w-8 h-[1px] bg-white border-0" />
-
-            <ul className="list-none mt-4">
-              {contact[0].links.map((link, index) => (
-                <li
-                  key={index}
-                  className={`text-xs font-normal leading-7 text-white hover:text-secondary cursor-pointer flex justify-start items-center gap-2`}
-                >
-                  <link.icon size={18} className=" text-secondary" />
-                  <b>{link.label}</b>
-                  <p>{link.text}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-        <div className="max-width md:flex justify-start items-center mt-8 pt-8 border-t border-y-cyan-50 border-opacity-40 px-2 ">
+        
+        <div className="max-width md:flex justify-start items-center mt-8 pt-8  px-2 ">
           <div className="md:basis-3/12 md:flex flex-wrap justify-center md:pr-10 pb-5">
             <Link href="/" locale="en">
               <Image
@@ -318,33 +264,7 @@ const Footer = () => {
             </p>
 
             <p>{t("footerNotice.gtc_multi_trading_para")}</p>
-            <p>
-              <span className="text-secondary">
-                {t("footerNotice.gtc_global_pty_heading")}
-              </span>
-              {t("footerNotice.gtc_global_pty_para")}
-            </p>
-            <h5 className="text-sm font-medium text-secondary">{t("footerNotice.title")} </h5>
-            <p>{t("footerNotice.gtc_global_para")}</p>
-
-            <p>
-              <span className="text-secondary">
-                {t("footerNotice.yellow2")}
-              </span>
-              {t("footerNotice.secPara")}
-            </p>
-            <p>
-              <span className="text-secondary">
-                {t("footerNotice.gtc_group_heading2")}
-              </span>
-              {t("footerNotice.gtc_group_para2")} <a className="text-secondary" href="https://gtcmtd.com" target="_blank">www.gtcmtd.com</a>
-            </p>
-            <p>
-              <span className="text-secondary">
-                {t("footerNotice.yellow4")}
-              </span>
-              {t("footerNotice.fifthPara")} <a className="text-secondary" href="https://gtcau.com.au/" target="_blank">www.gtcau.com.au.  </a>
-            </p>
+           
 
 
             <p>

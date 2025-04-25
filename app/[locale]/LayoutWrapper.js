@@ -38,12 +38,12 @@ const LayoutWrapper = ({ children, currentLanguage, locale, messages }) => {
         }}
       >
         {loading && <FallbackLoader />}
-        {!isStaticPath && <Header currentLanguage={currentLanguage} />}
+      
         {children}
         <ToastContainer autoClose={3000} />
         <FacebookPixelEvents />
 
-        {!isStaticPath && <Footer />}
+       
       </NextIntlClientProvider>
     </Suspense>
   );

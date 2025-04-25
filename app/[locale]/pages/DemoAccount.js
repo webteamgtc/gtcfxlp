@@ -19,12 +19,7 @@ const DemoAccountPage = () => {
           buttonLink="https://my.gtcfx.com/getview?view=register"
           imageUrl="/account/live-account-mobile.webp"
         />
-        <section className="top-content py-10 2xl:py-12 3xl:py-16 relative z-30">
-          <div className="container">
-            <WhyChooseIcon />
-          </div>
-        </section>
-        <MainForm />
+    
 
       </LocationContextProvider>
     </>

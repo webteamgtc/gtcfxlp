@@ -173,11 +173,11 @@ const MainForm = () => {
 
     return (
         <section className="demo-account">
-            <div className="max-w-6xl mx-auto p-10 shadow-2xl">
+            <div className="max-w-6xl mx-auto p-5 shadow-2xl">
                 <div className="relative">
-                    <form onSubmit={formik.handleSubmit} className="bg-white relative text-gray-700 rounded-3xl p-8 mx-auto">
+                    <form onSubmit={formik.handleSubmit} className="bg-white relative text-gray-700 rounded-3xl p-5 mx-auto">
                         {/* Full Name & Email */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
                             <div className="relative">
                                 <RiUserLocationLine className="absolute top-4 left-3 text-gray-400 h-5 w-5" />
                                 <input
@@ -206,8 +206,64 @@ const MainForm = () => {
                         </div>
 
 
-                        <div className="grid grid-cols-2 gap-6 mb-6">
+                        <div className="grid grid-cols-1 gap-3 mb-3">
+                        <div className="relative">
+                                <div className="relative">
+                                    <CiMail className="absolute top-4 left-3 text-gray-400 h-5 w-5" />
+                                    <input
+                                        type="email"
+                                        className={`w-full bg-white px-4 py-3 pl-9 border ${formik.touched.email && formik.errors.email ? "border-red-500" : "border-gray-300"} rounded-lg focus:outline-none`}
+                                        placeholder="Email"
+                                        {...formik.getFieldProps("email")}
+                                    />
+                                    {formik.touched.email && formik.errors.email && (
+                                        <p className="text-red-500 text-sm">{formik.errors.email}</p>
+                                    )}
+                                    <div className="absolute top-2 bg-primary right-3 rounded-md cursor-pointer text-white  py-1.5 px-2"
+                                        onClick={() => {
+                                            sendVerificationCode()
+                                        }}
+                                    >
+                                        {loading ? "Sending.." : "Get Code"}
+                                    </div>
+                                </div>
+                                {showOtp &&
+                                    <div className="grid grid-cols-1 gap-6">
+                                        <div>
+                                            <p className="my-2 text-sm">OTP has been sent to given Email</p>
+                                            <OtpInput
+                                                value={formik.values.otp}
+                                                onChange={(otp) => formik.setFieldValue("otp", otp)}
+                                                numInputs={6}
+                                                containerStyle={{
+                                                    justifyContent: 'space-around',
+                                                    alignItems: "center",
+                                                    gap: "5px"
+                                                }}
+                                                renderInput={(props) => <input {...props} />}
+                                                isInputNum
+                                                inputStyle={{
+                                                    borderRadius: '5px',
+                                                    paddingBottom: '8px',
+                                                    paddingTop: "8px",
+                                                    width: "20%",
+                                                    backgroundColor: "#fff",
+                                                    color: "#000",
+                                                    fontWeight: "700",
+                                                    outlineColor: '#f9c617',
+                                                    border: formik.touched.otp && formik.errors.otp ? "1px solid red" : "1px solid #ccc",
+                                                }}
+
+                                                />
+                                            {formik.touched.otp && formik.errors.otp && (
+                                                <p className="text-red-500 text-sm mt-2">{formik.errors.otp}</p>
+                                            )}
+                                        </div>
+                                    </div>
+                                }
+                            </div>
                             <div className="relative">
+                                
                                 <PhoneInput
                                     international
                                     countryCallingCodeEditable={false}
@@ -220,62 +276,7 @@ const MainForm = () => {
                                     <p className="text-red-500 text-sm">{formik.errors.phone}</p>
                                 )}
                             </div>
-                            <div className="relative">
-                                <div className="relative">
-                                    <CiMail className="absolute top-4 left-3 text-gray-400 h-5 w-5" />
-                                    <input
-                                        type="email"
-                                        className={`w-full bg-white px-4 py-3 pl-9 border ${formik.touched.email && formik.errors.email ? "border-red-500" : "border-gray-300"} rounded-lg focus:outline-none`}
-                                        placeholder="Email"
-                                        {...formik.getFieldProps("email")}
-                                    />
-                                    {formik.touched.email && formik.errors.email && (
-                                        <p className="text-red-500 text-sm">{formik.errors.email}</p>
-                                    )}
-                                    <div className="absolute top-2 bg-secondary right-3 rounded-md cursor-pointer text-white  py-1.5 px-2"
-                                        onClick={() => {
-                                            sendVerificationCode()
-                                        }}
-                                    >
-                                        {loading ? "Sending.." : "Get Code"}
-                                    </div>
-                                </div>
-                                {showOtp &&
-                                    <div className="grid grid-cols-1 gap-6">
-                                        <div>
-                                            <p className="mb-1">OTP has been sent to given Email</p>
-                                            <OtpInput
-                                                value={formik.values.otp}
-                                                onChange={(otp) => formik.setFieldValue("otp", otp)}
-                                                numInputs={6}
-                                                containerStyle={{
-                                                    justifyContent: 'space-around',
-                                                    alignItems: "center",
-                                                    gap: "10px",
-                                                    width: "70%",
-                                                }}
-                                                renderInput={(props) => <input {...props} />}
-                                                isInputNum
-                                                inputStyle={{
-                                                    borderRadius: '5px',
-                                                    paddingBottom: '8px',
-                                                    paddingTop: "8px",
-                                                    width: "20%",
-                                                    backgroundColor: "#f3f4f6",
-                                                    color: "#000",
-                                                    fontWeight: "700",
-                                                    outlineColor: '#f9c617',
-                                                    border: formik.touched.otp && formik.errors.otp ? "1px solid red" : "1px solid gray",
-                                                }}
-
-                                            />
-                                            {formik.touched.otp && formik.errors.otp && (
-                                                <p className="text-red-500 text-sm mt-2">{formik.errors.otp}</p>
-                                            )}
-                                        </div>
-                                    </div>
-                                }
-                            </div>
+                            
                         </div>
 
                         <div className="relative mb-6">
@@ -300,7 +301,7 @@ const MainForm = () => {
 
                         {/* Submit Button */}
                         <div className="text-center">
-                            <button type="submit" className="bg-secondary text-white font-semibold py-3 px-8 rounded-full text-lg">
+                            <button type="submit" className="bg-primary text-white font-semibold py-2 px-8 rounded-lg text-lg">
                                 {loading ? "Submitting.." : "Submit"}
                             </button>
                         </div>
