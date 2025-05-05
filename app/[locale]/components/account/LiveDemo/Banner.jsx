@@ -3,8 +3,6 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { useLocationDetail } from "@/context/useLocationDetail";
 import MainForm from "@/app/[locale]/free-demo-account/form";
-import Image from "next/image";
-import LiveAccountButton from "../../liveAccountButton";
 
 
 const Banner = () => {

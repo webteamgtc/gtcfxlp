@@ -173,11 +173,11 @@ const MainForm = () => {
 
     return (
         <section className="demo-account">
-            <div className="max-w-6xl mx-auto p-5 shadow-2xl">
+            <div className="max-w-6xl mx-auto p-5">
                 <div className="relative">
                     <form onSubmit={formik.handleSubmit} className="bg-white relative text-gray-700 rounded-3xl p-5 mx-auto">
                         {/* Full Name & Email */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+                        <div className="grid grid-cols-1 gap-3 mb-3">
                             <div className="relative">
                                 <RiUserLocationLine className="absolute top-4 left-3 text-gray-400 h-5 w-5" />
                                 <input
