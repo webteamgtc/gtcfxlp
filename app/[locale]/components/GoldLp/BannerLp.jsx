@@ -17,7 +17,7 @@ const BannerLp = () => {
               Maximize profits every time you trade{" "}
               <span className="text-secondary font-bold">GOLD</span>
             </h2>
-            <p className="text-sm py-5 leading-6 max-w-2xl">
+            <p className="text text-[14px] py-5 max-w-3xl text-left text-white leading-7">
               Trade gold with tight spreads, fast execution, and top-tier
               conditions built for serious traders. Take advantage of powerful
               platforms and pro-level tools. Stay ahead with reliable insights
@@ -27,7 +27,7 @@ const BannerLp = () => {
           </div>
   
           {/* Form Area - spans 1 column */}
-          <div className="col-span-3 md:col-span-1 shadow-2xl">
+          <div className="col-span-3 md:col-span-1">
             <MainForm />
           </div>
         </div>

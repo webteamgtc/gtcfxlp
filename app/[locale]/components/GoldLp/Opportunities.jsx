@@ -1,57 +1,71 @@
-"use client"
-import React from 'react';
+"use client";
+import React from "react";
+import Image from "next/image";
+import LiveAccountButton from "../liveAccountButton";
+
+const goldCards = [
+  {
+    icon: "/goldlp/icon1.svg",
+    alt: "Analyze trends",
+    text: "Analyze trends with intuitive, gold-focused features.",
+  },
+  {
+    icon: "/goldlp/Image-08.webp",
+    alt: "Trade what matters",
+    text: "Trade what matters, filter out the rest.",
+  },
+  {
+    icon: "/goldlp/icon2.svg",
+    alt: "Real-time insights",
+    text: "Get insights that work in real-time.",
+  },
+];
 
 const GoldOpportunitySection = () => {
-    return (
-        <section className="bg-white py-20 px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                See Gold Opportunities Others Miss
-            </h2>
-            <p className="text-primary text-sm max-w-2xl mx-auto mb-12">
-                Join a gold trading platform that offers more than just low spreads. At GTC, we combine institutional-grade pricing, pro-level platforms, and lightning-fast execution to give gold traders the edge they need to thrive. Here's why traders trust us:
-            </p>
-
-            <div className="grid grid-cols-1 mt-32 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
-                {/* Card 1 */}
-                <div className="bg-[#0b1244] min-h-48 relative rounded-xl shadow-2xl p-6 justify-end flex flex-col items-center text-white">
-                    <img
-                        src="/goldlp/icon1.svg"
-                        alt="Analyze trends"
-                        className="w-44 h-44 absolute -top-20 rounded-full mb-4 object-cover"
-                    />
-                    <p className="mt-2 ">Analyze trends with intuitive, gold-focused features.</p>
+  return (
+    <section className="bg-white py-10 md:py-20 text-center">
+        <div className="max-w-5xl mx-auto">
+                <div className="text-center">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                        See Gold Opportunities Others Miss
+                    </h2>
+                    <p className="text max-w-3xl mx-auto mb-12 leading-7">
+                        Join a gold trading platform that offers more than just low spreads. At
+                        GTC, we combine institutional-grade pricing, pro-level platforms, and
+                        lightning-fast execution to give gold traders the edge they need to
+                        thrive. Here's why traders trust us:
+                    </p>
                 </div>
+            
+       
+    
 
-                {/* Card 2 */}
-                <div className="bg-[#0b1244] min-h-48 relative rounded-xl shadow-2xl p-6 justify-end flex flex-col items-center text-white">
-                    <img
-                        src="/goldlp/icon2.svg"
-                        alt="Analyze trends"
-                        className="w-44 h-44 absolute -top-20 rounded-full mb-4 object-cover"
-                    />
-                    <p className="mt-2 ">Trade what matters, filter out the rest.</p>
-                </div>
-
-
-                <div className="bg-[#0b1244] min-h-48 relative rounded-xl shadow-2xl p-6 justify-end flex flex-col items-center text-white">
-                    <img
-                        src="/goldlp/icon1.svg"
-                        alt="Analyze trends"
-                        className="w-44 h-44 absolute -top-20 rounded-full mb-4 object-cover"
-                    />
-                    <p className="mt-2">Get insights that work in real-time.</p>
-                </div>
-
-
+      <div className="grid grid-cols-1 mt-28 md:grid-cols-3 gap-12">
+        {goldCards.map((card, index) => (
+          <div
+            key={index}
+            className="bg-[#0b1244] min-h-48 relative rounded-xl shadow-2xl p-6 justify-end flex flex-col items-center text-white"
+          >
+            <div className="w-52 h-52 absolute -top-20">
+              <Image
+                src={card.icon}
+                alt={card.alt}
+                width={200}
+                height={200}
+                className="rounded-full object-cover"
+              />
             </div>
+            <p className="mt-24 text-sm md:text-base max-w-606 px-4 pt-4">{card.text}</p>
+          </div>
+        ))}
+      </div>
 
-            <div className="mt-12">
-                <button className="bg-yellow-400 min-w-52 hover:bg-yellow-500 text-black font-medium px-6 py-2 rounded-lg">
-                    Open an Account
-                </button>
-            </div>
-        </section>
-    );
+      <div className="mt-14 mb-3">
+        <LiveAccountButton />
+      </div>
+      </div>
+    </section>
+  );
 };
 
 export default GoldOpportunitySection;

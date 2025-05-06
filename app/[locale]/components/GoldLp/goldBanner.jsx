@@ -1,5 +1,7 @@
-
+'use client'
 import React from 'react';
+import clsx from 'clsx';
+import LiveAccountButton from '../liveAccountButton';
 
 const GoldFeatureStrip = () => {
     const features = [
@@ -10,7 +12,7 @@ const GoldFeatureStrip = () => {
         {
             title: 'Transparent Pricing',
             description: 'No hidden fees. No commission. No surprises.',
-            active:true
+            active: true,
         },
         {
             title: 'Full Flexibility',
@@ -25,13 +27,15 @@ const GoldFeatureStrip = () => {
     return (
         <div className="bg-white pt-10 pb-16 px-4 relative">
             <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 min-h-44 shadow-2xl first:rounded-2xl  rounded-2xl md:grid-cols-4 bg-[#f2f2f2] md:-mt-20 z-10 relative">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-0 min-h-44 shadow-2xl rounded-2xl bg-[#f2f2f2] border border-secondary md:-mt-28 z-10 relative border-opacity-30">
                     {features.map((item, index) => (
                         <div
                             key={index}
-                            className={`p-6 py-8 flex flex-col justify-center text-center transition-all duration-300 rounded-lg 
-                                ${item?.active ? ' scale-110 bg-[#0b1244] shadow-md  text-white' : ' text-[#0b1244]'} 
-                                hover:bg-[#0b1244] hover:text-white hover:scale-110 hover:shadow-md `}
+                            className={clsx(
+                                "p-6 py-8 flex flex-col justify-center text-center transition-all duration-300 border-none rounded-lg",
+                               
+                                "hover:bg-[#0b1244] hover:text-white hover:scale-105 hover:shadow-2xl border border-secondary border-opacity-30"
+                            )}
                         >
                             <h3 className="font-semibold text-md mb-2">{item.title}</h3>
                             <p className="text-sm">{item.description}</p>
@@ -39,22 +43,20 @@ const GoldFeatureStrip = () => {
                     ))}
                 </div>
 
-                <div className="text-center mt-10">
-                    <button className="bg-yellow-400 min-w-52 hover:bg-yellow-500 text-black font-medium px-6 py-2 rounded-lg">
-                        Open an Account
-                    </button>
+                <div className="text-center mt-14">
+                   <LiveAccountButton />
                 </div>
-            </div>
 
-            <div className="text-center mt-20 px-4">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#0b1244] mb-4">
-                    0 Noise. 100% Gold Focus
-                </h2>
-                <p className="text-gray-600 max-w-2xl mx-auto">
-                    No distractions. Just pure trading power, built for gold traders. Every tool, feature, and
-                    signal is designed with one goal, helping you maximize every gold opportunity. Stay sharp,
-                    stay focused, and trade gold with absolute clarity.
-                </p>
+                <div className="text-center mt-14 px-4">
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#0b1244] mb-4">
+                        0 Noise. 100% Gold Focus
+                    </h2>
+                    <p className="text-gray-600 max-w-2xl mx-auto">
+                        No distractions. Just pure trading power, built for gold traders. Every tool, feature, and
+                        signal is designed with one goal—helping you maximize every gold opportunity.
+                        Stay sharp, stay focused, and trade gold with absolute clarity.
+                    </p>
+                </div>
             </div>
         </div>
     );

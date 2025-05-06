@@ -12,19 +12,19 @@ import LayoutWrapper from "./LayoutWrapper";
 const roboto = localFont({
   src: [
     {
-      path: "../../public/fonts/Roboto/Roboto-Regular.ttf",
+      path: "../../public/fonts/poppin/poppins-regular.ttf",
       weight: "400",
     },
     {
-      path: "../../public/fonts/Roboto/Roboto-Medium.ttf",
+      path: "../../public/fonts/poppin/poppins-medium.ttf",
       weight: "500",
     },
     {
-      path: "../../public/fonts/Roboto/Roboto-Bold.ttf",
+      path: "../../public/fonts/poppin/poppins-semibold.ttf",
       weight: "700",
     },
     {
-      path: "../../public/fonts/Roboto/Roboto-Black.ttf",
+      path: "../../public/fonts/poppin/poppins-semibold.ttf",
       weight: "900",
     },
   ],
