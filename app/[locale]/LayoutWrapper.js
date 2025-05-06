@@ -6,7 +6,6 @@ import { useLanguageHook } from "./hook";
 import FallbackLoader from "./components/LoadingSpinner";
 import { Suspense, useEffect, useState } from "react";
 import { FacebookPixelEvents } from "./components/utilities/pixelEvent";
-
 import Footer from "./components/Footer";
 import { ToastContainer } from "react-toastify";
 import { usePathname } from "next/navigation";
@@ -43,7 +42,7 @@ const LayoutWrapper = ({ children, currentLanguage, locale, messages }) => {
         <ToastContainer autoClose={3000} />
         <FacebookPixelEvents />
 
-       
+       <Footer />
       </NextIntlClientProvider>
     </Suspense>
   );

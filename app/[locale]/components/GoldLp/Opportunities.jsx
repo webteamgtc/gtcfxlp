@@ -44,14 +44,14 @@ const GoldOpportunitySection = () => {
         {goldCards.map((card, index) => (
           <div
             key={index}
-            className="bg-[#0b1244] min-h-48 relative rounded-xl shadow-2xl p-6 justify-end flex flex-col items-center text-white"
+            className="bg-[#0b1244] min-h-60 relative rounded-xl shadow-2xl p-6 justify-end flex flex-col items-center text-white"
           >
-            <div className="w-52 h-52 absolute -top-20">
+            <div className="w-56 h-56 absolute -top-20">
               <Image
                 src={card.icon}
                 alt={card.alt}
-                width={200}
-                height={200}
+                width={224}
+                height={224}
                 className="rounded-full object-cover"
               />
             </div>

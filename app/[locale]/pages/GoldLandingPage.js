@@ -6,6 +6,7 @@ import GoldFeatureStrip from '../components/GoldLp/goldBanner'
 import GoldContentHighlights from '../components/GoldLp/Higlights'
 import TradeGoldFeatures from '../components/GoldLp/TradeGoldFeature'
 import FeatureBar from '../components/GoldLp/FeatureBar'
+import TradeTrust from '../components/GoldLp/TradeTrust'
 
 const GoldLandingPage = () => {
   return (
@@ -15,7 +16,9 @@ const GoldLandingPage = () => {
       <GoldOpportunitySection />
       <WhyChooseGTC />
       <GoldFeatureStrip />
-     
+      <GoldContentHighlights />
+      <TradeGoldFeatures />
+      <TradeTrust />
     </>
   )
 }

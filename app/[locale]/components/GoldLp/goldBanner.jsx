@@ -43,11 +43,11 @@ const GoldFeatureStrip = () => {
                     ))}
                 </div>
 
-                <div className="text-center mt-14">
+                <div className="text-center py-16">
                    <LiveAccountButton />
                 </div>
 
-                <div className="text-center mt-14 px-4">
+                <div className="text-center px-4">
                     <h2 className="text-2xl md:text-3xl font-bold text-[#0b1244] mb-4">
                         0 Noise. 100% Gold Focus
                     </h2>

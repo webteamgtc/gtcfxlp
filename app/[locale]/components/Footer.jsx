@@ -250,10 +250,11 @@ const Footer = () => {
                 alt="iso icon"
               />
             </div>
+            <div className=""></div>
           </div>
           <div className="md:basis-9/12 text-xs text-white text-opacity-70 space-y-3 leading-5">
             <p>
-              <span className="text-secondary">{t("footerNotice.yellow")}</span>
+            
               {t("footerNotice.firstPara")}
             </p>
             <p>
