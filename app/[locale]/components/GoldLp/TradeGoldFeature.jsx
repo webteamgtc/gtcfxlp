@@ -36,7 +36,7 @@ const TradeGoldFeatures = () => {
         {features.map((item, index) => (
           <div
             key={index}
-            className="relative bg-gray-100 min-h-[240px] rounded-xl shadow-lg p-8 pt-24 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105"
+            className="relative bg-[#f3f3f3] min-h-[240px] rounded-xl shadow-lg p-8 pt-24 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105"
           >
             <div className="absolute -top-12 w-32 h-32 rounded-full bg-white shadow-md flex items-center justify-center">
               <Image src={item.icon} alt={item.title} width={128} height={128} />
