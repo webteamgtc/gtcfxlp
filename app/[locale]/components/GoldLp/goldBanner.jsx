@@ -37,7 +37,7 @@ const GoldFeatureStrip = () => {
                                 "hover:bg-[#0b1244] hover:text-white hover:scale-105 hover:shadow-2xl border border-secondary border-opacity-30"
                             )}
                         >
-                            <h3 className="font-semibold text-md mb-2">{item.title}</h3>
+                            <h4 className="font-semibold text-md mb-2">{item.title}</h4>
                             <p className="text-sm">{item.description}</p>
                         </div>
                     ))}
@@ -52,9 +52,8 @@ const GoldFeatureStrip = () => {
                         0 Noise. 100% Gold Focus
                     </h2>
                     <p className="text max-w-3xl mx-auto mb-12 leading-7">
-                        No distractions. Just pure trading power, built for gold traders. Every tool, feature, and
-                        signal is designed with one goal—helping you maximize every gold opportunity.
-                        Stay sharp, stay focused, and trade gold with absolute clarity.
+                    No distractions. Just pure trading power, built for gold traders. Every tool, feature, and signal is designed with one goal, helping you maximize every gold opportunity. Stay sharp, stay focused, and trade gold with absolute clarity.
+
                     </p>
                 </div>
             </div>

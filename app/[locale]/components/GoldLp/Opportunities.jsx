@@ -30,10 +30,7 @@ const GoldOpportunitySection = () => {
                         See Gold Opportunities Others Miss
                     </h2>
                     <p className="text max-w-3xl mx-auto mb-12 leading-7">
-                        Join a gold trading platform that offers more than just low spreads. At
-                        GTC, we combine institutional-grade pricing, pro-level platforms, and
-                        lightning-fast execution to give gold traders the edge they need to
-                        thrive. Here's why traders trust us:
+                    Smart tools and clear signals give you an edge in a noisy market. Cut through the noise and focus on what truly matters. Trade gold with confidence, backed by real-time insights designed to help you act fast and smart.
                     </p>
                 </div>
             

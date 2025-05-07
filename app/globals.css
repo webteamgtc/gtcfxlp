@@ -803,3 +803,34 @@ body > section.container > div > div:nth-child(1) > div > div:nth-child(8) > svg
   background: #000;
   opacity: 1;
 }
+.flip-container {
+  perspective: 1000px;
+}
+
+.flip-inner {
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+  position: relative;
+}
+
+/* Change from rotateY to rotateX */
+.flip-container:hover .flip-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-back {
+  transform: rotateX(180deg);
+}
+
+.flip-front,
+.flip-back {
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}

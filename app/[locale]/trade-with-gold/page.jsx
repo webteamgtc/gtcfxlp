@@ -7,12 +7,12 @@ export async function generateMetadata({ params: { locale } }) {
     const t = createTranslator({ locale, messages });
     const url =
     locale != "en"
-    ? `${process.env.NEXT_PUBLIC_BASE_URL}/en/thank-you`
-    : `${process.env.NEXT_PUBLIC_BASE_URL}/thank-you`;
+    ? `${process.env.NEXT_PUBLIC_BASE_URL}/en/trade-with-gold`
+    : `${process.env.NEXT_PUBLIC_BASE_URL}/trade-with-gold`;
 
     return {
-        title: 'Maximize Profits Every Time You Trade With GOLD',
-        description: 'Trade gold with tight spreads, fast execution, and top-tier conditions built for serious traders. Take advantage of powerful platforms and pro-level tools. Stay ahead with reliable insights designed for gold trading success.',
+        title: 'Trade Gold with Tight Spreads & Fast Execution | GTC',
+        description: 'Join over 985,000 traders choosing GTC for reliable, low-spread gold trading. Sign up in minutes and start trading today!',
         alternates: {
             canonical: url,
           },

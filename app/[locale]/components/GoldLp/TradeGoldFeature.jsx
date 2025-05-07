@@ -24,11 +24,8 @@ const features = [
 const TradeGoldFeatures = () => {
   return (
     <section className="bg-white pt-16 pb-24 px-4 text-center relative overflow-hidden">
-      <div className="text-center pt-8">
-        <LiveAccountButton />
-      </div>
 
-      <h2 className="text-2xl md:text-3xl font-bold text-[#0b1244] my-20">
+      <h2 className="text-2xl md:text-3xl font-bold text-[#0b1244] mb-20">
         Trade gold like it’s meant to be.
       </h2>
 

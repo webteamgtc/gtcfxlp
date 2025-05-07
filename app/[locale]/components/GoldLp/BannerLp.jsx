@@ -13,10 +13,10 @@ const BannerLp = () => {
             className="col-span-3 md:col-span-2 text-left text-white"
          
           >
-            <div className='max-w-xl  p-6 md:p-14 '> <h2 className="text-[32px] md:text-[48px] lg:text-[55px] capitalize leading-tight md:leading-[60px] lg:leading-[65px]">
+            <div className='max-w-xl  p-6 md:p-14 '> <h1 className="text-[32px] md:text-[48px] lg:text-[55px] capitalize leading-tight md:leading-[60px] lg:leading-[65px]">
               Maximize profits every time you trade{" "}
               <span className="text-secondary font-bold">GOLD</span>
-            </h2>
+            </h1>
             <p className="text text-[14px] py-5 max-w-3xl text-left text-white leading-7">
               Trade gold with tight spreads, fast execution, and top-tier
               conditions built for serious traders. Take advantage of powerful
