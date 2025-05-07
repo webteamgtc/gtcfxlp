@@ -4,20 +4,20 @@ import MainForm from '../../free-demo-account/form'
 
 const BannerLp = () => {
   return (
-    <section className="py-10 lg:py-[70px] bg-[url('/goldlp/bg-1.svg')] bg-cover bg-center text-center h-[850px]">
+    <section className="py-10 lg:py-[70px] bg-[url('/goldlp/bg-1.svg')] bg-cover bg-center text-center md:h-[850px]">
     <div className="max-w-[1380px] mx-auto px-4">
-      <div className="bg-[url('/goldlp/bg-2.svg')] bg-cover bg-center bg-no-repeat h-[650px] border border-gray-100 border-opacity-10">
+      <div className="bg-[url('/goldlp/bg-2.svg')] bg-cover bg-center bg-no-repeat md:h-[650px] border border-gray-100 border-opacity-10">
         <div className="grid grid-cols-3 gap-8 items-center h-full">
           {/* Content Area - spans 2 columns */}
           <div
             className="col-span-3 md:col-span-2 text-left text-white"
          
           >
-            <div className='max-w-xl  p-6 md:p-14 '> <h1 className="text-[32px] md:text-[48px] lg:text-[55px] capitalize leading-tight md:leading-[60px] lg:leading-[65px]">
+            <div className='max-w-xl  px-6 pt-6 md:p-14 '> <h1 className="text-[28px] md:text-[48px] lg:text-[55px] capitalize leading-tight md:leading-[60px] lg:leading-[65px]">
               Maximize profits every time you trade{" "}
               <span className="text-secondary font-bold">GOLD</span>
             </h1>
-            <p className="text text-[14px] py-5 max-w-3xl text-left text-white leading-7">
+            <p className="text text-xs md:text-[14px] pt-5 max-w-3xl text-left text-white leading-6 md:leading-7">
               Trade gold with tight spreads, fast execution, and top-tier
               conditions built for serious traders. Take advantage of powerful
               platforms and pro-level tools. Stay ahead with reliable insights

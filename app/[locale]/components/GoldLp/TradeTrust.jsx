@@ -25,9 +25,9 @@ const TradeTrust = () => {
     <section className="bg-[#faf9f3] py-20 px-4">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
         {/* Left: 40% (2 of 5 columns) */}
-        <div className="col-span-2 relative w-full h-[500px]">
+        <div className="col-span-2 relative w-full h-96 md:h-[600px]">
           <Image
-            src="/goldlp/lpbg2.png"
+            src="/goldlp/bg-lpp.png"
             alt="Trader"
             fill
             className="object-contain"

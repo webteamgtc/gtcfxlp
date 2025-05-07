@@ -26,7 +26,7 @@ const GoldOpportunitySection = () => {
     <section className="bg-white py-10 md:py-20 text-center">
         <div className="max-w-5xl mx-auto">
                 <div className="text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                <h2 className="text-xl md:text-4xl font-bold mb-4">
                         See Gold Opportunities Others Miss
                     </h2>
                     <p className="text max-w-3xl mx-auto mb-12 leading-7">
