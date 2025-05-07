@@ -51,7 +51,7 @@ const GoldFeatureStrip = () => {
                     <h2 className="text-2xl md:text-3xl font-bold text-[#0b1244] mb-4">
                         0 Noise. 100% Gold Focus
                     </h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
+                    <p className="text max-w-3xl mx-auto mb-12 leading-7">
                         No distractions. Just pure trading power, built for gold traders. Every tool, feature, and
                         signal is designed with one goal—helping you maximize every gold opportunity.
                         Stay sharp, stay focused, and trade gold with absolute clarity.

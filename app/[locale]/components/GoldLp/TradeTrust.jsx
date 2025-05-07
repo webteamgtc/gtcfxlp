@@ -37,7 +37,7 @@ const TradeTrust = () => {
         {/* Right: 60% (3 of 5 columns) */}
         <div className="col-span-3">
           <h2 className="text-2xl md:text-4xl font-bold text-[#0b1244] mb-4 leading-tight">
-            Why over <span className="text-[#c49b2f]">985,000</span> traders
+            Why over <span className="text-secondary">985,000</span> traders
             <br /> trust GTC for gold?
           </h2>
           <p className="text max-w-3xl mb-12 leading-7 text-left">
@@ -54,19 +54,19 @@ const TradeTrust = () => {
               >
                 {/* Top background header with dynamic image */}
                 <div
-                  className="h-36 relative flex items-center px-6"
+                  className="h-36 relative flex items-center px-6 pb-6"
                   style={{
                     backgroundImage: `url(${card.bgImage})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center top',
                   }}
                 >
-                  <h3 className="text-white font-semibold text-base">{card.title}</h3>
+                  <h3 className="text-white font-semibold text-lg">{card.title}</h3>
                 </div>
 
                 {/* Description */}
                 <div className="bg-white p-6 text-left">
-                  <p className="text h-48 text-left">{card.desc}</p>
+                  <p className="text h-48 text-left text-base leading-7">{card.desc}</p>
                 </div>
               </div>
             ))}

@@ -173,7 +173,7 @@ const MainForm = () => {
 
     return (
         <section className="demo-account">
-            <div className="max-w-6xl mx-auto p-5 bg-white shadow-2xl">
+            <div className="max-w-6xl mx-auto p-5 bg-white shadow-2xl rounded-2xl">
                 <div className=" ">
                      <div className="flex justify-center items-center ">
                                 <Image
@@ -289,7 +289,7 @@ const MainForm = () => {
                                     className={`w-full px-4 py-3 border-b ${formik.touched.phone && formik.errors.phone ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none`}
                                 />
                                 {formik.touched.phone && formik.errors.phone && (
-                                    <p className="text-red-500 text-sm">{formik.errors.phone}</p>
+                                    <p className="text-red-500 text-sm text-left">{formik.errors.phone}</p>
                                 )}
                             </div>
                             
@@ -309,7 +309,7 @@ const MainForm = () => {
                                 ))}
                             </select>
                             {formik.touched.country && formik.errors.country && (
-                                <p className="text-red-500 text-sm">{formik.errors.country}</p>
+                                <p className="text-red-500 text-sm text-left">{formik.errors.country}</p>
                             )}
                         </div>
 

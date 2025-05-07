@@ -7,6 +7,7 @@ import GoldContentHighlights from '../components/GoldLp/Higlights'
 import TradeGoldFeatures from '../components/GoldLp/TradeGoldFeature'
 import FeatureBar from '../components/GoldLp/FeatureBar'
 import TradeTrust from '../components/GoldLp/TradeTrust'
+import GoldMarketEdge from '../components/GoldLp/GoldMarketEdge'
 
 const GoldLandingPage = () => {
   return (
@@ -19,6 +20,7 @@ const GoldLandingPage = () => {
       <GoldContentHighlights />
       <TradeGoldFeatures />
       <TradeTrust />
+      <GoldMarketEdge />
     </>
   )
 }
