@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import LiveAccountButton from '../liveAccountButton';
+import Link from 'next/link';
 
 const GoldContentHighlights = () => {
   const highlights = [
@@ -47,7 +47,13 @@ const GoldContentHighlights = () => {
         ))}
       </div>
       <div className="mt-14 mb-3 text-center">
-        <LiveAccountButton hoverStyle="bg-white text-[#000] hover:text-[#fff]" />
+      <Link
+      href="https://web.mygtc.app/login/register"
+      target="_blank"
+      className={`bg-secondary text-white text-sm 3xl:text-xl px-8 py-3 text-center rounded-md md:w-auto w-[300px] md:m-0 mx-auto transition-colors duration-900 hover:text-primary hover:bg-gradient-to-r hover:from-white hover:to-white duration-500`}
+    >
+      OPEN Live Account
+    </Link>
       </div>
       </div>
     </section>
