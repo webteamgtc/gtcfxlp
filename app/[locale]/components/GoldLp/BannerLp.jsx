@@ -4,9 +4,9 @@ import MainForm from '../../free-demo-account/form'
 
 const BannerLp = () => {
   return (
-    <section className="py-10 lg:py-[70px] bg-[url('/goldlp/bg-1.svg')] bg-cover bg-center text-center h-[700px]">
+    <section className="py-10 lg:py-[70px] bg-[url('/goldlp/bg-1.svg')] bg-cover bg-center text-center h-[850px]">
     <div className="max-w-[1380px] mx-auto px-4">
-      <div className="bg-[url('/goldlp/bg-2.svg')] bg-cover bg-center bg-no-repeat h-[500px] border border-gray-100 border-opacity-10">
+      <div className="bg-[url('/goldlp/bg-2.svg')] bg-cover bg-center bg-no-repeat h-[650px] border border-gray-100 border-opacity-10">
         <div className="grid grid-cols-3 gap-8 items-center h-full">
           {/* Content Area - spans 2 columns */}
           <div
@@ -27,7 +27,7 @@ const BannerLp = () => {
           </div>
   
           {/* Form Area - spans 1 column */}
-          <div className="col-span-3 md:col-span-1">
+          <div className="col-span-3 md:col-span-1 p-5">
             <MainForm />
           </div>
         </div>
