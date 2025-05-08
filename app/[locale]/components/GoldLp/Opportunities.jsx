@@ -23,13 +23,13 @@ const goldCards = [
 
 const GoldOpportunitySection = () => {
   return (
-    <section className="bg-white py-10 md:py-20 text-center">
-        <div className="max-w-5xl mx-auto">
+    <section className="bg-white pb-10 md:py-20 text-center">
+        <div className="max-w-5xl mx-auto px-5">
                 <div className="text-center">
-                <h2 className="text-xl md:text-4xl font-bold mb-4">
+                <h2 className="text-2xl md:text-4xl font-bold mb-4">
                         See Gold Opportunities Others Miss
                     </h2>
-                    <p className="text max-w-3xl mx-auto mb-12 leading-7">
+                    <p className="textnpm  max-w-3xl mx-auto mb-12 leading-7">
                     Smart tools and clear signals give you an edge in a noisy market. Cut through the noise and focus on what truly matters. Trade gold with confidence, backed by real-time insights designed to help you act fast and smart.
                     </p>
                 </div>
@@ -37,11 +37,11 @@ const GoldOpportunitySection = () => {
        
     
 
-      <div className="grid grid-cols-1 mt-28 md:grid-cols-3 gap-12">
+      <div className="grid grid-cols-1 mt-28 md:grid-cols-3 gap-24 md:ap-12">
         {goldCards.map((card, index) => (
           <div
             key={index}
-            className="bg-[#0b1244] min-h-60 relative rounded-xl shadow-2xl p-6 justify-end flex flex-col items-center text-white"
+            className="bg-[#0b1244] min-h-60 relative rounded-xl shadow-2xl p-6 justify-center md:justify-end flex flex-col items-center text-white"
           >
             <div className="w-56 h-56 absolute -top-20">
               <Image
@@ -52,7 +52,7 @@ const GoldOpportunitySection = () => {
                 className="rounded-full object-cover"
               />
             </div>
-            <p className="mt-24 text-sm md:text-base max-w-606 px-4 pt-4">{card.text}</p>
+            <p className="mt-24 text-base max-w-606 px-4 pt-10 md:pt-4">{card.text}</p>
           </div>
         ))}
       </div>

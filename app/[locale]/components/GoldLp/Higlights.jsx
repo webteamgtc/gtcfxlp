@@ -22,10 +22,10 @@ const GoldContentHighlights = () => {
   ];
 
   return (
-    <section className="bg-[#0b1244] text-white  py-10 md:py-20 ">
-      <div className="max-w-5xl mx-auto">
+    <section className="bg-[#0b1244] text-white  py-10 md:py-20">
+      <div className="max-w-5xl mx-auto px-5 md:px-0">
         <div className='text-center text-white pb-10'>
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <h2 className="text-2xl md:text-4xl font-bold mb-4 px-5">
         Trade Gold Like It’s Meant to Be
                     </h2>
                    

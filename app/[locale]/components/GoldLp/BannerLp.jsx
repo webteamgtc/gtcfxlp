@@ -27,7 +27,7 @@ const BannerLp = () => {
           </div>
   
           {/* Form Area - spans 1 column */}
-          <div className="col-span-3 md:col-span-1 p-5">
+          <div className="col-span-3 md:col-span-1 p-2 md:p-5">
             <MainForm />
           </div>
         </div>

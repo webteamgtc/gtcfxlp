@@ -191,7 +191,7 @@ const MainForm = () => {
                               </div>
                 </div>
                 <div className="relative">
-                    <form onSubmit={formik.handleSubmit} className="bg-white relative text-gray-700 rounded-3xl p-5 mx-auto">
+                    <form onSubmit={formik.handleSubmit} className="bg-white relative text-gray-700 rounded-3xl md:p-5 mx-auto">
                         {/* Full Name & Email */}
                         <div className="grid grid-cols-1 gap-3 mb-3">
                             <div className="relative">
