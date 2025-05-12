@@ -163,23 +163,23 @@ const MainForm = () => {
         <section className="demo-account">
             <div className="max-w-6xl mx-auto p-5 bg-white shadow-2xl rounded-2xl">
                 <div className=" ">
-                    <div className="flex justify-center items-center ">
-                        <Image
-                            src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/img/logo-2024-new.webp"
-                            width={200}
-                            height={72}
-                            alt="GTCFX"
-                            className="lg:w-[200px] lg:h-[72px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
-                            onClick={() => {
-                                router.push("/", { locale: locale });
-                            }}
-                        />
-
-
-                    </div>
+                     <div className="flex justify-center items-center pb-5 ">
+                                <Image
+                                  src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/img/logo-2024-new.webp"
+                                  width={200}
+                                  height={72}
+                                  alt="GTCFX"
+                                  className="lg:w-[200px] lg:h-[72px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
+                                  onClick={() => {
+                                    router.push("/", { locale: locale });
+                                  }}
+                                />
+                          
+                                
+                              </div>
                 </div>
                 <div className="relative">
-                    <form onSubmit={formik.handleSubmit} className="bg-white relative text-gray-700 rounded-3xl p-5 mx-auto">
+                    <form onSubmit={formik.handleSubmit} className="bg-white relative text-gray-700 rounded-3xl md:p-2 mx-auto">
                         {/* Full Name & Email */}
                         <div className="grid grid-cols-1 gap-3 mb-3">
                             <div className="relative">
@@ -306,7 +306,7 @@ const MainForm = () => {
                         {/* Submit Button */}
                         <div className="text-center">
                             <button type="submit" className="bg-primary text-white w-full font-semibold py-2 px-8 rounded-lg text-lg">
-                                {loading ? "Submitting.." : "Submit"}
+                                {loading ? "Submitting.." : "Get Started Now"}
                             </button>
                         </div>
                     </form>

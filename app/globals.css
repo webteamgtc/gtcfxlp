@@ -811,17 +811,16 @@ body > section.container > div > div:nth-child(1) > div > div:nth-child(8) > svg
   transform-style: preserve-3d;
   transition: transform 0.6s ease;
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-/* Change from rotateY to rotateX */
+/* Flip on hover (vertical flip) */
 .flip-container:hover .flip-inner {
   transform: rotateX(180deg);
 }
 
-.flip-back {
-  transform: rotateX(180deg);
-}
-
+/* Front and back faces */
 .flip-front,
 .flip-back {
   backface-visibility: hidden;
@@ -833,4 +832,19 @@ body > section.container > div > div:nth-child(1) > div > div:nth-child(8) > svg
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  text-align: center;
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500;
+}
+
+/* Back face flipped vertically */
+.flip-back {
+  transform: rotateX(180deg);
+  background-color: #02002f; /* Tailwind's primary */
+  color: white;
+}
+
+.flip-front {
+  background-color: #f5f5f5;
+  color: #1d2746;
 }

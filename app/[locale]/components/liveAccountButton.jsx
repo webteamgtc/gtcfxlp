@@ -31,7 +31,7 @@ const LiveAccountButton = ({ hoverStyle, link }) => {
 
   return (
     <Link
-      href={finalLink}
+      href="https://web.mygtc.app/login/register"
       target="_blank"
       className={`bg-primary text-white text-sm 3xl:text-xl px-8 py-3 text-center rounded-md md:w-auto w-[300px] md:m-0 mx-auto transition-colors duration-900 hover:bg-gradient-to-r hover:from-secondary hover:to-[#b68756] duration-500 ${hoverStyle}`}
     >

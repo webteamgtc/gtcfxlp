@@ -27,7 +27,7 @@ const GoldFeatureStrip = () => {
     return (
         <div className="bg-white pt-10 pb-16 px-4 relative">
             <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-0 min-h-44 shadow-2xl rounded-2xl bg-[#f2f2f2] border border-secondary md:-mt-28 z-10 relative border-opacity-30">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-0 min-h-44 shadow-2xl rounded-2xl bg-[#f2f2f2] border border-secondary mt-[-80px] md:-mt-28 z-10 relative border-opacity-30">
                     {features.map((item, index) => (
                         <div
                             key={index}
@@ -43,19 +43,7 @@ const GoldFeatureStrip = () => {
                     ))}
                 </div>
 
-                <div className="text-center py-16">
-                   <LiveAccountButton />
-                </div>
-
-                <div className="text-center px-4">
-                    <h2 className="text-2xl md:text-3xl font-bold text-[#0b1244] mb-4">
-                        0 Noise. 100% Gold Focus
-                    </h2>
-                    <p className="text max-w-3xl mx-auto mb-12 leading-7">
-                    No distractions. Just pure trading power, built for gold traders. Every tool, feature, and signal is designed with one goal, helping you maximize every gold opportunity. Stay sharp, stay focused, and trade gold with absolute clarity.
-
-                    </p>
-                </div>
+              
             </div>
         </div>
     );
