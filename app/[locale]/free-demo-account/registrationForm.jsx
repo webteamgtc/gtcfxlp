@@ -25,7 +25,6 @@ const MainForm = () => {
     const locale = useLocale();
     const { countryData } = useLocationDetail();
     const { countryList } = useCountriesDetails(locale);
-    const [otpLoading, setOtpLoading] = useState(false)
     const [showOtp, setShowOtp] = useState(false)
     const [loading, setLoading] = useState(false);
     const router = useRouter()
@@ -40,7 +39,7 @@ const MainForm = () => {
 
 
     const sendVerificationCode = () => {
-        setOtpLoading(true)
+        setLoading(true)
         axios.post(`/api/getgcode`, {
             email: formik?.values?.email,
             type: "0"
@@ -56,7 +55,7 @@ const MainForm = () => {
         }).catch(err => {
             setShowOtp(false)
         }).finally(() => {
-            setOtpLoading(false)
+            setLoading(false)
         })
     }
 
@@ -90,26 +89,37 @@ const MainForm = () => {
             body: JSON.stringify(payload),
         });
         const result = await res.json();
-        const emailData = axios.post(
-            `/api/email`,
-            JSON.stringify(data)
-        ).then(res => {
-            console.log({ res })
-        }).catch(err => {
-            console.log({ err })
-        })
         if (result.success) {
             toast.success('Data inserted successfully');
             formik.resetForm();
             setLoading(false)
-            localStorage.setItem('user', JSON.stringify(data));
-            router.push("/thank-you",);
-            formik.resetForm()
-            setShowOtp(false)
         } else {
             toast.error('Error inserting data: ' + result.error);
             setLoading(false)
         }
+        axios.post(`/api/reg`, {
+            email: formik?.values?.email,
+            nickname: formik?.values?.nickname,
+            code: formik?.values?.otp,
+            country: formik?.values?.country,
+            phone: formik?.values?.phone,
+            password: formik?.values?.password,
+            last_name: formik?.values?.last_name,
+        }).then(res => {
+            if (res?.data?.success) {
+                toast.success(res?.data?.message)
+                localStorage.setItem('user', JSON.stringify(data));
+                router.push("/thank-you",);
+                formik.resetForm()
+                setShowOtp(false)
+            } else {
+                toast.error(res?.data?.message)
+            }
+        }).catch(err => {
+            toast.success(err?.data?.message)
+        }).finally(() => {
+            setLoading(false)
+        })
         setLoading(false);
     }
 
@@ -140,7 +150,7 @@ const MainForm = () => {
         onSubmit: async (values) => {
             try {
                 setLoading(true);
-                // await axios.post("https://hooks.zapier.com/hooks/catch/16420445/3ajp4wk/", JSON.stringify(values));
+                await axios.post("https://hooks.zapier.com/hooks/catch/16420445/3ajp4wk/", JSON.stringify(values));
             } catch (error) {
             } finally {
                 axios.get(`/api/get-bounce-data?Email_address=${values?.email}`).then(res => {
@@ -163,20 +173,20 @@ const MainForm = () => {
         <section className="demo-account">
             <div className="max-w-6xl mx-auto p-5 bg-white shadow-2xl rounded-2xl">
                 <div className=" ">
-                    <div className="flex justify-center items-center ">
-                        <Image
-                            src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/img/logo-2024-new.webp"
-                            width={200}
-                            height={72}
-                            alt="GTCFX"
-                            className="lg:w-[200px] lg:h-[72px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
-                            onClick={() => {
-                                router.push("/", { locale: locale });
-                            }}
-                        />
-
-
-                    </div>
+                     <div className="flex justify-center items-center ">
+                                <Image
+                                  src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/img/logo-2024-new.webp"
+                                  width={200}
+                                  height={72}
+                                  alt="GTCFX"
+                                  className="lg:w-[200px] lg:h-[72px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
+                                  onClick={() => {
+                                    router.push("/", { locale: locale });
+                                  }}
+                                />
+                          
+                                
+                              </div>
                 </div>
                 <div className="relative">
                     <form onSubmit={formik.handleSubmit} className="bg-white relative text-gray-700 rounded-3xl p-5 mx-auto">
@@ -211,7 +221,7 @@ const MainForm = () => {
 
 
                         <div className="grid grid-cols-1 gap-3 mb-3">
-                            <div className="relative">
+                        <div className="relative">
                                 <div className="relative">
                                     <CiMail className="absolute top-3 left-3 text-gray-400 h-5 w-5" />
                                     <input
@@ -228,7 +238,7 @@ const MainForm = () => {
                                             sendVerificationCode()
                                         }}
                                     >
-                                        {otpLoading ? "Sending.." : "Get Code"}
+                                        {loading ? "Sending.." : "Get Code"}
                                     </div>
                                 </div>
                                 {showOtp &&
@@ -258,7 +268,7 @@ const MainForm = () => {
                                                     border: formik.touched.otp && formik.errors.otp ? "1px solid red" : "1px solid #ccc",
                                                 }}
 
-                                            />
+                                                />
                                             {formik.touched.otp && formik.errors.otp && (
                                                 <p className="text-red-500 text-sm mt-2">{formik.errors.otp}</p>
                                             )}
@@ -267,7 +277,7 @@ const MainForm = () => {
                                 }
                             </div>
                             <div className="relative">
-
+                                
                                 <PhoneInput
                                     international
                                     countryCallingCodeEditable={false}
@@ -280,7 +290,7 @@ const MainForm = () => {
                                     <p className="text-red-500 text-sm text-left">{formik.errors.phone}</p>
                                 )}
                             </div>
-
+                            
                         </div>
 
                         <div className="relative mb-6">

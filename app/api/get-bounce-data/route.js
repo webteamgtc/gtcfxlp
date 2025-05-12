@@ -30,11 +30,10 @@ export async function GET(req) {
         });
     }
 
-    const query = `SELECT Email_address FROM marketing_campaign WHERE Email_address =  @param0`;
+    const query = `SELECT * FROM marketing_campaign WHERE Email_address =  @param0`;
 
     try {
         const data = await getSingleData(query, [email]);
-
         if (data.length > 0) {
             return new Response(JSON.stringify({ success: true, exists: true }), {
                 status: 200,
