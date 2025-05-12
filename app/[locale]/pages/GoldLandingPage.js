@@ -8,6 +8,7 @@ import TradeGoldFeatures from '../components/GoldLp/TradeGoldFeature'
 import FeatureBar from '../components/GoldLp/FeatureBar'
 import TradeTrust from '../components/GoldLp/TradeTrust'
 import GoldMarketEdge from '../components/GoldLp/GoldMarketEdge'
+import GoldTrustSection from '../components/GoldLp/GoldTrustSection'
 
 const GoldLandingPage = () => {
   return (
@@ -17,6 +18,7 @@ const GoldLandingPage = () => {
       <GoldOpportunitySection />
       <WhyChooseGTC />
       <GoldFeatureStrip />
+      <GoldTrustSection />
       <GoldContentHighlights />
       <TradeGoldFeatures />
       <TradeTrust />

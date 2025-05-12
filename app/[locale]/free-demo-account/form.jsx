@@ -175,7 +175,7 @@ const MainForm = () => {
         <section className="demo-account">
             <div className="max-w-6xl mx-auto p-5 bg-white shadow-2xl rounded-2xl">
                 <div className=" ">
-                     <div className="flex justify-center items-center ">
+                     <div className="flex justify-center items-center pb-5 ">
                                 <Image
                                   src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/img/logo-2024-new.webp"
                                   width={200}
@@ -191,7 +191,7 @@ const MainForm = () => {
                               </div>
                 </div>
                 <div className="relative">
-                    <form onSubmit={formik.handleSubmit} className="bg-white relative text-gray-700 rounded-3xl md:p-5 mx-auto">
+                    <form onSubmit={formik.handleSubmit} className="bg-white relative text-gray-700 rounded-3xl md:p-2 mx-auto">
                         {/* Full Name & Email */}
                         <div className="grid grid-cols-1 gap-3 mb-3">
                             <div className="relative">
@@ -318,7 +318,7 @@ const MainForm = () => {
                         {/* Submit Button */}
                         <div className="text-center">
                             <button type="submit" className="bg-primary text-white w-full font-semibold py-2 px-8 rounded-lg text-lg">
-                                {loading ? "Submitting.." : "Submit"}
+                                {loading ? "Submitting.." : "Get Started Now"}
                             </button>
                         </div>
                     </form>

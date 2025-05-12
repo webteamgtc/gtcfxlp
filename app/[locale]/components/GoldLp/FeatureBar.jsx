@@ -23,7 +23,7 @@ const features = [
 
 const BannerWithFeatureBar = () => {
   return (
-    <section className="relative mb-10 md:mb-20">
+    <section className="relative mb-10 md:mb-14">
       <div className="md:absolute left-1/2 transform md:-translate-x-1/2 md:bottom-[-60px] z-10 w-full max-w-6xl px-2">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-[#f5f5f5] rounded-md md:rounded-full shadow-lg overflow-hidden">
         {features.map((feature, index) => (

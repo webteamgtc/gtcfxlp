@@ -13,11 +13,11 @@ const BannerLp = () => {
             className="col-span-3 md:col-span-2 text-left text-white"
          
           >
-            <div className='max-w-xl  px-6 pt-6 md:p-14 '> <h1 className="text-[28px] md:text-[48px] lg:text-[55px] capitalize leading-tight md:leading-[60px] lg:leading-[65px]">
-              Maximize profits every time you trade{" "}
-              <span className="text-secondary font-bold">GOLD</span>
+            <div className='max-w-3xl  px-6 pt-6 md:p-14 '> <h1 className="text-[28px] md:text-[48px] lg:text-[60px] capitalize leading-tight md:leading-[65px] lg:leading-[65px]">
+              Maximize your profits with tight spreads and fast execution on every 
+              <span className="text-secondary font-bold uppercase"><br></br> gold trade</span>.
             </h1>
-            <p className="text text-xs md:text-[14px] pt-5 max-w-3xl text-left text-white leading-6 md:leading-7">
+            <p className="text text-xs md:text-[14px] pt-5 max-w-lg text-left text-white leading-6 md:leading-7">
               Trade gold with tight spreads, fast execution, and top-tier
               conditions built for serious traders. Take advantage of powerful
               platforms and pro-level tools. Stay ahead with reliable insights
