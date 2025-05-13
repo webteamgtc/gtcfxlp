@@ -15,6 +15,7 @@ import useCountriesDetails from "@/context/useCountriesDetails";
 import { useLocationDetail } from "@/context/useLocationDetail";
 import { toast } from "react-toastify";
 import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 import Image from "next/image";
 const platforms = [
     { id: 1, name: "MT4", value: "40" },
@@ -138,12 +139,12 @@ const MainForm = () => {
             phone: Yup.string().required("Phone number is required"),
             country: Yup.string().required("Country is required"),
             otp: Yup.string().length(6, "OTP must be 6 digits").required("OTP is required"),
-            // terms: Yup.bool().oneOf([true], "Please accept the terms and conditions"),
+           terms: Yup.bool().oneOf([true], "Please accept the terms and conditions"),
         }),
         onSubmit: async (values) => {
             try {
                 setLoading(true);
-                // await axios.post("https://hooks.zapier.com/hooks/catch/16420445/3ajp4wk/", JSON.stringify(values));
+               await axios.post("https://hooks.zapier.com/hooks/catch/16420445/2nppxqi/", JSON.stringify(values));
             } catch (error) {
             } finally {
                 axios.get(`/api/get-bounce-data?Email_address=${values?.email}`).then(res => {
@@ -177,29 +178,13 @@ const MainForm = () => {
         <section className="demo-account">
             <div className="max-w-6xl mx-auto p-5 bg-white shadow-2xl rounded-2xl">
                 <div className=" ">
-<<<<<<< HEAD
-                     <div className="flex justify-center items-center pb-5 ">
-                                <Image
-                                  src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/img/logo-2024-new.webp"
-                                  width={150}
-                                  height={54}
-                                  alt="GTCFX"
-                                  className="lg:w-[150px] lg:h-[54px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
-                                  onClick={() => {
-                                    router.push("/", { locale: locale });
-                                  }}
-                                />
-                          
-                                
-                              </div>
-=======
                     <div className="flex justify-center items-center pb-5 ">
                         <Image
                             src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/img/logo-2024-new.webp"
-                            width={200}
-                            height={72}
+                            width={150}
+                            height={54}
                             alt="GTCFX"
-                            className="lg:w-[200px] lg:h-[72px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
+                            className="lg:w-[150px] lg:h-[54px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
                             onClick={() => {
                                 router.push("/", { locale: locale });
                             }}
@@ -207,10 +192,9 @@ const MainForm = () => {
 
 
                     </div>
->>>>>>> 47d132432d018bdc653af3263037911cfdf69e7b
                 </div>
                 <div className="relative">
-                    <form onSubmit={formik.handleSubmit} className="bg-white relative text-xs rounded-3xl md:p-2 mx-auto form-setting">
+                    <form onSubmit={formik.handleSubmit} className="bg-white relative text-xs rounded-3xl md:p-0 mx-auto form-setting text-left">
                         {/* Full Name & Email */}
                         <div className="grid grid-cols-1 gap-3 mb-3">
                             <div className="relative">
@@ -316,13 +300,13 @@ const MainForm = () => {
                                     className={`w-full px-4 py-3 border-b ${formik.touched.phone && formik.errors.phone ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none`}
                                 />
                                 {formik.touched.phone && formik.errors.phone && (
-                                    <p className="text-red-500 pt-1 text-left">{formik.errors.phone}</p>
+                                    <p className="text-red-500 text-sm text-left">{formik.errors.phone}</p>
                                 )}
                             </div>
 
                         </div>
 
-                        <div className="relative mb-6">
+                        <div className="relative mb-3">
                             <GiWorld className="absolute top-3 left-3 text-gray-400 h-4 w-4" />
                             <select
                                 className={`w-full bg-white px-4 py-3 pl-9 border-b ${formik.touched.country && formik.errors.country ? "border-b-red-500" : "border-gray-300"} text-gray-700`}
@@ -336,19 +320,41 @@ const MainForm = () => {
                                 ))}
                             </select>
                             {formik.touched.country && formik.errors.country && (
-                                <p className="text-red-500 pt-1 text-left">{formik.errors.country}</p>
+                                <p className="text-red-500 text-sm text-left">{formik.errors.country}</p>
                             )}
                         </div>
 
-
+                               <div className="mb-5">
+                                <label
+                                    className={`block text-xs pb-2 ${formik.touched.terms && formik.errors.terms
+                                    ? "text-red-500"
+                                    : ""
+                                    }`}
+                                    htmlFor="terms"
+                                >
+                                    {formik.touched.terms && formik.errors.terms
+                                    ? formik.errors.terms
+                                    : "Please accept the terms and conditions"}
+                                </label>
+                                <div className="flex items-start gap-1">
+                                    <input
+                                    type="checkbox"
+                                    name="terms"
+                                    id="terms"
+                                    onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                                    value="checked"
+                                    className="h-5 w-5"
+                                    />
+                                    <p className="inline  text-[10px] text-primary">
+                                    By clicking Submit, I confirm that: (1) I have read and agree to the <a className="text-secondary underline" href="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/pdf-files/Vanuatu.pdf">Client Agreements</a>; (2) I consent to GTCFX contacting me at reasonable times; and (3) my number is not on the Do Not Call Register (DNCR).
+                                    </p>
+                                </div>
+                                </div>
 
                         {/* Submit Button */}
                         <div className="text-center">
-<<<<<<< HEAD
-                            <button type="submit" className="bg-primary text-white w-full font-semibold py-2 px-8 rounded-lg text-sm">
-=======
-                            <button disabled={isDisable} type="submit" className="bg-primary text-white w-full font-semibold py-2 px-8 rounded-lg text-lg">
->>>>>>> 47d132432d018bdc653af3263037911cfdf69e7b
+                            <button disabled={isDisable} type="submit" className="bg-primary text-white w-full font-medium py-2 px-8 rounded-lg text-lg">
                                 {loading ? "Submitting.." : "Get Started Now"}
                             </button>
                         </div>

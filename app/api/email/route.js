@@ -4,7 +4,7 @@ import { transporter, mailOptions } from '../../../config/nodemailer';
 const generateEmailContent = (data) => {
     return {
         html: `
-      <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -16,60 +16,44 @@ const generateEmailContent = (data) => {
     <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="border-spacing: 0; width: 100%;">
         <tr>
             <td align="center" bgcolor="#F7F7F7">
-                <div class="container" style="max-width: 650px; margin: 0 auto; background-color: #192055; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="border-radius: 36px; padding: 20px; background-color: #fff; width: 100%;">
+                <div class="container" style="max-width: 600px; margin: 0 auto; background-color: #192055; padding: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="border-radius: 36px; padding: 0px; background-color: #fff; width: 100%;">
                         <tr>
                             <td class="header" style="padding: 20px; text-align: center;">
                                 <img src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/email-test.png" alt="GTC Global Capital Trade Logo" style="max-width: 165px; height: auto;">
                             </td>
                         </tr>
                         <tr>
-                            <td class="content">
+                   <td class="content">
                                 <h1 style="color: #192055; text-align:center; font-size: 18px; max-width: 80%; margin: 0px auto;">
-                                    Get Up-To 20% Bonus Promotion
+                                    Start Trading Gold Now
                                 </h1>
-                                <h3 style="font-size: 16px; color: #192055;">
-                                    Dear,
-                                </h3>
-                                <p>Please find below the details of a new submission for the Get Up-To 20% Bonus Promotion:</p>
-                                
-                                <h2 style="color: #192055; font-size: 16px;">Account Information</h2>
-                                <table class="content-table" style="width: 100%; margin-top: 20px; border-collapse: collapse;">
-                                    <tr>
-                                        <th style="padding: 10px; text-align: left; background-color: #f2f2f2; color: #192055;">Full Name</th>
-                                        <td style="padding: 10px; border: 1px solid #ddd;">${data?.nickname||""} ${data?.last_name||""}</td>
-                                    </tr>
-                                    <tr>
-                                        <th style="padding: 10px; text-align: left; background-color: #f2f2f2; color: #192055;">Email Address</th>
-                                        <td style="padding: 10px; border: 1px solid #ddd;">${data?.email}</td>
-                                    </tr>
-                                    <tr>
-                                        <th style="padding: 10px; text-align: left; background-color: #f2f2f2; color: #192055;">Phone Number</th>
-                                        <td style="padding: 10px; border: 1px solid #ddd;">${data?.phone}</td>
-                                    </tr>
-                                    <tr>
-                                        <th style="padding: 10px; text-align: left; background-color: #f2f2f2; color: #192055;">Account Number</th>
-                                        <td style="padding: 10px; border: 1px solid #ddd;">${data?.account_no}</td>
-                                    </tr>
-                                     <tr>
-                                        <th style="padding: 10px; text-align: left; background-color: #f2f2f2; color: #192055;">Deposit Amount</th>
-                                        <td style="padding: 10px; border: 1px solid #ddd;"> $${data?.deposit_amount}</td>
-                                    </tr>
-                                    <tr>
-                                        <th style="padding: 10px; text-align: left; background-color: #f2f2f2; color: #192055;">Country</th>
-                                        <td style="padding: 10px; border: 1px solid #ddd;">${data?.country}</td>
-                                    </tr>
-                                    
-                                </table>
+                    <h3 style="font-size: 16px; color: #192055; margin-bottom: 16px; padding: 0px 20px;">
+                    Hi ${data?.nickname||""},
+                    </h3>
+                    <p style="margin-bottom: 16px; padding: 0px 20px;">
+                    Thanks for signing up with <b style="color: #b68756;">GTC</b>!
+                    </p>
+                    <p style="margin-bottom: 16px; padding: 0px 20px;">
+You’re almost there. To start trading gold with tighter spreads and instant execution, simply click the link below to register yourself and start trading.                    </p>
+                    <p style="text-align: center; margin: 20px 0;">
+                    <a href="https://web.mygtc.app/" target="_blank" style="background-color: #202a6b; text-decoration: none; color: #ffffff; padding: 10px 25px; border-radius: 5px; display: inline-block;">Register Now</a>
+                    </p>
+                    <p style="margin-bottom: 16px; padding: 0px 20px;">
+                    Didn’t sign up or received this by mistake? No problem, just ignore this email.
+                    </p>
+                    <p style="margin-bottom: 16px; padding: 0px 20px;">
+                    📞 Need help? <br><br>Reach us at <a href="tel:+9711800667788" style="color: #b68756; text-decoration: underline;">+971 1800667788</a> or email <a href="mailto:support@gtcfx.com" style="color: #b68756; text-decoration: underline;">support@gtcfx.com</a>.
+                    </p>
+                    <p style="padding: 0px 20px; margin-bottom: 0;">
+                    Talk soon.<br/>
+                    </p>
+                    <p style="line-height: 30px; padding: 0px 20px; ">Best Regards,<br><strong style="color: #192055; margin-top:5px;">The GTC Team</strong></p>
+                </td>
+                </tr>
 
-            
-
-                                <p style="line-height: 30px; padding-top: 20px;">Please review the information and process the bonus promotion accordingly.</p>
-                                <p style="line-height: 30px; padding-top: 20px;">Best Regards,<br><strong style="color: #192055; margin-top: 5px;">GTCFX Team</strong></p>
-                            </td>
-                        </tr>
                         <tr>
-                            <td class="footer" style="padding: 20px 0px; font-size: 10px; color: #000; background-color: #f7f7f736; border-radius: 0 0 36px 36px; text-align: center;">
+                            <td class="footer" style="padding: 20px 20px; font-size: 10px; color: #000; background-color: #f7f7f736; border-radius: 0 0 36px 36px; text-align: center;">
                                 <div class="social-icons" style="padding-bottom: 10px;">
                                     <a href="https://www.facebook.com/gtcfxofficial" style="text-decoration: none;" target="_blank">
                                         <img alt="Facebook" src="https://d3k81ch9hvuctc.cloudfront.net/assets/email/buttons/default/facebook_96.png" style="width: 24px; height: 24px; margin: 0 5px;">

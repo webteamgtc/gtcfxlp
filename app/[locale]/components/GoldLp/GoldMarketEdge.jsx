@@ -46,9 +46,9 @@ const GoldMarketEdge = () => {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
-              className="rounded-xl shadow-md min-h-[350px] text-white flex flex-col justify-end pb-14 items-end text-center transition-all duration-300 px-6 py-8"
+              className="rounded-xl shadow-md min-h-[350px] text-white flex flex-col justify-end pb-14 md:items-end text-center transition-all duration-300 px-6 py-8"
             >
-              <h3 className="font-semibold text-lg">{item.title}</h3>
+              <h3 className="font-semibold text-lg text-center">{item.title}</h3>
               <p className="text-sm mt-2">{item.desc}</p>
             </div>
           ))}
