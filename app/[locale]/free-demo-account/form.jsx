@@ -28,6 +28,8 @@ const MainForm = () => {
     const [otpLoading, setOtpLoading] = useState(false)
     const [showOtp, setShowOtp] = useState(false)
     const [loading, setLoading] = useState(false);
+    const [storedOtp, setStoredOtp] = useState("")
+    const [isDisable, setIsDisable] = useState(true)
     const router = useRouter()
     const path = usePathname();
 
@@ -41,13 +43,14 @@ const MainForm = () => {
 
     const sendVerificationCode = () => {
         setOtpLoading(true)
-        axios.post(`/api/getgcode`, {
+        axios.post(`/api/otp-smtp`, {
             email: formik?.values?.email,
             type: "0"
         }).then(res => {
-            if (res?.data?.success && res?.data?.message != "Email has been registered") {
+            if (res?.data?.message) {
                 setShowOtp(true)
-                toast.success(res?.data?.message)
+                setStoredOtp(res?.data?.message?.slice(4, -3))
+                toast.success("Otp send successfully!")
             }
             else {
                 toast.error(res?.data?.message)
@@ -159,24 +162,35 @@ const MainForm = () => {
         },
     });
 
+    const verifyOtpCode = async () => {
+        if (formik.values.otp == storedOtp) {
+            toast.success("Otp Verified Successfully!")
+            setShowOtp(false)
+            setIsDisable(false)
+        }
+        else {
+            toast.error("Otp Verification Failed try again!")
+        }
+    }
+
     return (
         <section className="demo-account">
             <div className="max-w-6xl mx-auto p-5 bg-white shadow-2xl rounded-2xl">
                 <div className=" ">
-                     <div className="flex justify-center items-center pb-5 ">
-                                <Image
-                                  src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/img/logo-2024-new.webp"
-                                  width={200}
-                                  height={72}
-                                  alt="GTCFX"
-                                  className="lg:w-[200px] lg:h-[72px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
-                                  onClick={() => {
-                                    router.push("/", { locale: locale });
-                                  }}
-                                />
-                          
-                                
-                              </div>
+                    <div className="flex justify-center items-center pb-5 ">
+                        <Image
+                            src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/img/logo-2024-new.webp"
+                            width={200}
+                            height={72}
+                            alt="GTCFX"
+                            className="lg:w-[200px] lg:h-[72px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
+                            onClick={() => {
+                                router.push("/", { locale: locale });
+                            }}
+                        />
+
+
+                    </div>
                 </div>
                 <div className="relative">
                     <form onSubmit={formik.handleSubmit} className="bg-white relative text-gray-700 rounded-3xl md:p-2 mx-auto">
@@ -232,7 +246,7 @@ const MainForm = () => {
                                     </div>
                                 </div>
                                 {showOtp &&
-                                    <div className="grid grid-cols-1 gap-6">
+                                    <div className="grid grid-cols-1 gap-2">
                                         <div>
                                             <p className="my-2 text-sm">OTP has been sent to given Email</p>
                                             <OtpInput
@@ -262,6 +276,14 @@ const MainForm = () => {
                                             {formik.touched.otp && formik.errors.otp && (
                                                 <p className="text-red-500 text-sm mt-2">{formik.errors.otp}</p>
                                             )}
+
+                                        </div>
+                                        <div className=" bg-primary right-0 rounded-md cursor-pointer text-white  py-1.5 px-2"
+                                            onClick={() => {
+                                                verifyOtpCode()
+                                            }}
+                                        >
+                                            Verify Code
                                         </div>
                                     </div>
                                 }
@@ -305,7 +327,7 @@ const MainForm = () => {
 
                         {/* Submit Button */}
                         <div className="text-center">
-                            <button type="submit" className="bg-primary text-white w-full font-semibold py-2 px-8 rounded-lg text-lg">
+                            <button disabled={isDisable} type="submit" className="bg-primary text-white w-full font-semibold py-2 px-8 rounded-lg text-lg">
                                 {loading ? "Submitting.." : "Get Started Now"}
                             </button>
                         </div>
