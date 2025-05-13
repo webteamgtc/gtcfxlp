@@ -186,7 +186,7 @@ const MainForm = () => {
                                 <RiUserLocationLine className="absolute top-3 left-3 text-gray-400 h-4 w-4" />
                                 <input
                                     type="text"
-                                    className={`w-full px-4 bg-white py-3 pl-5 border-b ${formik.touched.nickname && formik.errors.nickname ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none focus:bg-none active:bg-inherit`}
+                                    className={`w-full px-4 bg-white py-3 pl-9 border-b ${formik.touched.nickname && formik.errors.nickname ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none`}
                                     placeholder="First Name"
                                     {...formik.getFieldProps("nickname")}
                                 />
@@ -198,7 +198,7 @@ const MainForm = () => {
                                 <RiUserLocationLine className="absolute top-3 left-3 text-gray-400 h-4 w-4" />
                                 <input
                                     type="text"
-                                    className={`w-full px-4 bg-white py-3 pl-5 border-b ${formik.touched.last_name && formik.errors.last_name ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none`}
+                                    className={`w-full px-4 bg-white py-3 pl-9 border-b ${formik.touched.last_name && formik.errors.last_name ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none`}
                                     placeholder="Last Name"
                                     {...formik.getFieldProps("last_name")}
                                 />
@@ -216,7 +216,7 @@ const MainForm = () => {
                                     <CiMail className="absolute top-3 left-3 text-gray-400 h-4 w-4" />
                                     <input
                                         type="email"
-                                        className={`w-full bg-white px-4 py-3 pl-5 border-b ${formik.touched.email && formik.errors.email ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none focus:bg-none`}
+                                        className={`w-full bg-white px-4 py-3 pl-9 border-b ${formik.touched.email && formik.errors.email ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none focus:bg-none`}
                                         placeholder="Email"
                                         {...formik.getFieldProps("email")}
                                     />
@@ -286,7 +286,7 @@ const MainForm = () => {
                         <div className="relative mb-6">
                             <GiWorld className="absolute top-3 left-3 text-gray-400 h-4 w-4" />
                             <select
-                                className={`w-full bg-white px-4 py-3 pl-5 border-b ${formik.touched.country && formik.errors.country ? "border-b-red-500" : "border-gray-300"} text-gray-700`}
+                                className={`w-full bg-white px-4 py-3 pl-9 border-b ${formik.touched.country && formik.errors.country ? "border-b-red-500" : "border-gray-300"} text-gray-700`}
                                 {...formik.getFieldProps("country")}
                             >
                                 <option value="">Select Country</option>
