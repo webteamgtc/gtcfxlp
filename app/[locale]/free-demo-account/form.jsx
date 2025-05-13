@@ -166,10 +166,10 @@ const MainForm = () => {
                      <div className="flex justify-center items-center pb-5 ">
                                 <Image
                                   src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/img/logo-2024-new.webp"
-                                  width={200}
-                                  height={72}
+                                  width={150}
+                                  height={54}
                                   alt="GTCFX"
-                                  className="lg:w-[200px] lg:h-[72px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
+                                  className="lg:w-[150px] lg:h-[54px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
                                   onClick={() => {
                                     router.push("/", { locale: locale });
                                   }}
@@ -277,7 +277,7 @@ const MainForm = () => {
                                     className={`w-full px-4 py-3 border-b ${formik.touched.phone && formik.errors.phone ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none`}
                                 />
                                 {formik.touched.phone && formik.errors.phone && (
-                                    <p className="text-red-500 text-sm text-left">{formik.errors.phone}</p>
+                                    <p className="text-red-500 pt-1 text-left">{formik.errors.phone}</p>
                                 )}
                             </div>
 
@@ -297,7 +297,7 @@ const MainForm = () => {
                                 ))}
                             </select>
                             {formik.touched.country && formik.errors.country && (
-                                <p className="text-red-500 text-sm text-left">{formik.errors.country}</p>
+                                <p className="text-red-500 pt-1 text-left">{formik.errors.country}</p>
                             )}
                         </div>
 
@@ -305,7 +305,7 @@ const MainForm = () => {
 
                         {/* Submit Button */}
                         <div className="text-center">
-                            <button type="submit" className="bg-primary text-white w-full font-semibold py-2 px-8 rounded-lg text-lg">
+                            <button type="submit" className="bg-primary text-white w-full font-semibold py-2 px-8 rounded-lg text-sm">
                                 {loading ? "Submitting.." : "Get Started Now"}
                             </button>
                         </div>
