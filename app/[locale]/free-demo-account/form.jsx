@@ -179,31 +179,31 @@ const MainForm = () => {
                               </div>
                 </div>
                 <div className="relative">
-                    <form onSubmit={formik.handleSubmit} className="bg-white relative text-gray-700 rounded-3xl md:p-2 mx-auto">
+                    <form onSubmit={formik.handleSubmit} className="bg-white relative text-xs rounded-3xl md:p-2 mx-auto form-setting">
                         {/* Full Name & Email */}
                         <div className="grid grid-cols-1 gap-3 mb-3">
                             <div className="relative">
-                                <RiUserLocationLine className="absolute top-3 left-3 text-gray-400 h-5 w-5" />
+                                <RiUserLocationLine className="absolute top-3 left-3 text-gray-400 h-4 w-4" />
                                 <input
                                     type="text"
-                                    className={`w-full px-4 bg-white py-3 pl-9 border-b ${formik.touched.nickname && formik.errors.nickname ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none`}
+                                    className={`w-full px-4 bg-white py-3 pl-5 border-b ${formik.touched.nickname && formik.errors.nickname ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none focus:bg-none active:bg-inherit`}
                                     placeholder="First Name"
                                     {...formik.getFieldProps("nickname")}
                                 />
                                 {formik.touched.nickname && formik.errors.nickname && (
-                                    <p className="text-red-500 text-sm text-left">{formik.errors.nickname}</p>
+                                    <p className="text-red-500 text-left pt-1">{formik.errors.nickname}</p>
                                 )}
                             </div>
                             <div className="relative">
-                                <RiUserLocationLine className="absolute top-3 left-3 text-gray-400 h-5 w-5" />
+                                <RiUserLocationLine className="absolute top-3 left-3 text-gray-400 h-4 w-4" />
                                 <input
                                     type="text"
-                                    className={`w-full px-4 bg-white py-3 pl-9 border-b ${formik.touched.last_name && formik.errors.last_name ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none`}
+                                    className={`w-full px-4 bg-white py-3 pl-5 border-b ${formik.touched.last_name && formik.errors.last_name ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none`}
                                     placeholder="Last Name"
                                     {...formik.getFieldProps("last_name")}
                                 />
                                 {formik.touched.last_name && formik.errors.last_name && (
-                                    <p className="text-red-500 text-sm text-left">{formik.errors.last_name}</p>
+                                    <p className="text-red-500  pt-1 text-left">{formik.errors.last_name}</p>
                                 )}
                             </div>
 
@@ -213,15 +213,15 @@ const MainForm = () => {
                         <div className="grid grid-cols-1 gap-3 mb-3">
                             <div className="relative">
                                 <div className="relative">
-                                    <CiMail className="absolute top-3 left-3 text-gray-400 h-5 w-5" />
+                                    <CiMail className="absolute top-3 left-3 text-gray-400 h-4 w-4" />
                                     <input
                                         type="email"
-                                        className={`w-full bg-white px-4 py-3 pl-9 border-b ${formik.touched.email && formik.errors.email ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none`}
+                                        className={`w-full bg-white px-4 py-3 pl-5 border-b ${formik.touched.email && formik.errors.email ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none focus:bg-none`}
                                         placeholder="Email"
                                         {...formik.getFieldProps("email")}
                                     />
                                     {formik.touched.email && formik.errors.email && (
-                                        <p className="text-red-500 text-sm text-left">{formik.errors.email}</p>
+                                        <p className="text-red-500 pt-1 text-left">{formik.errors.email}</p>
                                     )}
                                     <div className="absolute top-2 bg-primary right-0 rounded-md cursor-pointer text-white  py-1.5 px-2"
                                         onClick={() => {
@@ -234,7 +234,7 @@ const MainForm = () => {
                                 {showOtp &&
                                     <div className="grid grid-cols-1 gap-6">
                                         <div>
-                                            <p className="my-2 text-sm">OTP has been sent to given Email</p>
+                                            <p className="my-2 text-left pt-1">OTP has been sent to given Email</p>
                                             <OtpInput
                                                 value={formik.values.otp}
                                                 onChange={(otp) => formik.setFieldValue("otp", otp)}
@@ -284,9 +284,9 @@ const MainForm = () => {
                         </div>
 
                         <div className="relative mb-6">
-                            <GiWorld className="absolute top-3 left-3 text-gray-400 h-5 w-5" />
+                            <GiWorld className="absolute top-3 left-3 text-gray-400 h-4 w-4" />
                             <select
-                                className={`w-full bg-white px-4 py-3 pl-9 border-b ${formik.touched.country && formik.errors.country ? "border-b-red-500" : "border-gray-300"} text-gray-700`}
+                                className={`w-full bg-white px-4 py-3 pl-5 border-b ${formik.touched.country && formik.errors.country ? "border-b-red-500" : "border-gray-300"} text-gray-700`}
                                 {...formik.getFieldProps("country")}
                             >
                                 <option value="">Select Country</option>
