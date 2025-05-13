@@ -95,7 +95,7 @@ export async function POST(req) {
   };
   try {
     await transporter.sendMail(mailData);
-    return NextResponse.json({ message: otp }, { status: 200 })
+    return NextResponse.json({ message: `5649${otp}632` }, { status: 200 })
   } catch (error) {
     console.log(error);
     return NextResponse.json({ message: 'Error Sending OTP' }, { status: 500 })
