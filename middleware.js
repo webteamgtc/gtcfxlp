@@ -13,7 +13,7 @@ const intlMiddleware = createMiddleware({
 });
 
 // List of allowed landing pages
-const allowedPages = ["/trade-with-gold", "/promo-bonus", "/vip-offer", "/gold-trading", "/welcome-bonus"];
+const allowedPages = ["/trade-with-gold","/trade-with-gold/thank-you", "/promo-bonus", "/vip-offer", "/gold-trading", "/welcome-bonus"];
 
 export default function middleware(request) {
   const host = request.headers.get("host");
