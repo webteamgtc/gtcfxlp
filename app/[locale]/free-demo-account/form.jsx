@@ -107,7 +107,7 @@ const MainForm = () => {
             formik.resetForm();
             setLoading(false)
             localStorage.setItem('user', JSON.stringify(data));
-            router.push("/thank-you",);
+            router.push("/trade-with-gold/thank-you",);
             formik.resetForm()
             setShowOtp(false)
         } else {
@@ -279,7 +279,7 @@ const MainForm = () => {
                                             )}
 
                                         </div>
-                                        <div className=" bg-primary right-0 rounded-md cursor-pointer text-white  py-1.5 px-2"
+                                        <div className=" bg-primary right-0 rounded-md cursor-pointer text-white  py-2 px-2 text-center"
                                             onClick={() => {
                                                 verifyOtpCode()
                                             }}

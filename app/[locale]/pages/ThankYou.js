@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const ThankYouPage = () => {
   const searchParams = useSearchParams();
@@ -37,7 +38,7 @@ const ThankYouPage = () => {
   if (!checked) return null; // Don't render anything until we've checked
 
   return (
-    <section className="py-10 md:py-14 xl:py-20 3xl:py-20 5xl:py-28">
+    <section className="py-10 md:pb-14 xl:pb-20 3xl:pb-20 5xl:pb-28">
       <div className="container text-left">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="content-left flex flex-col gap-5">
@@ -51,7 +52,7 @@ const ThankYouPage = () => {
               {" "}
               Let’s make this your best trading experience yet!
             </p>
-            <p className="text-secondary font-bold text-lg">Having Trouble ?</p>
+            <p className="text-secondary font-bold text-2xl py-2">Having Trouble ?</p>
             <p className="">
               {" "} 
               Contact Us at <a href="tel:+971800667788">+ 971 800 667788</a> & <a
@@ -65,6 +66,15 @@ const ThankYouPage = () => {
 
             <p className="text-primary font-bold text-lg">See you soon! GTC Team</p>
           </div>
+            {/* RIGHT (Image will appear first on mobile) */}
+                  <div className="relative w-full h-[400px] md:h-[550px] rounded-xl overflow-hidden">
+                    <Image
+                      src="/goldlp/gold.png"
+                      alt="Gold Trading Visual"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
         </div>
       </div>
     </section>
