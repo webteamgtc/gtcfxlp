@@ -23,7 +23,7 @@ const goldCards = [
 
 const GoldOpportunitySection = () => {
   return (
-    <section className="bg-white pb-10 md:py-20 text-center">
+    <section className="bg-white pb-12 md:py-16 text-center">
         <div className="max-w-5xl mx-auto px-5">
                 <div className="text-center">
                 <h2 className="text-2xl md:text-4xl font-bold mb-4">

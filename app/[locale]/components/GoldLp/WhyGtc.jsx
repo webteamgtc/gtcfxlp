@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const WhyChooseGTC = () => {
     return (
-        <section className="bg-[#0b1244] text-white py-10 md:py-20 px-4">
+        <section className="bg-[#0b1244] text-white py-10 md:py-16 px-4">
             <div className="max-w-5xl mx-auto text-center">
                 <h3 className="text-2xl md:text-4xl font-bold mb-6">Why Choose GTC?</h3>
                 <p className="text text-base max-w-3xl mx-auto mb-12 text-white leading-7">

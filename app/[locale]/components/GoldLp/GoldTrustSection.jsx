@@ -5,7 +5,7 @@ import { FaArrowDown, FaBolt, FaCreditCard } from 'react-icons/fa';
 
 const GoldTrustSection = () => {
   return (
-    <section className="bg-white py-16 px-4">
+    <section className="bg-white py-12 md:py-16 px-4">
       <div className="max-w-6xl mx-auto flex flex-col-reverse md:grid md:grid-cols-2 gap-10 items-center">
         {/* LEFT (Content will appear second on mobile) */}
         <div className="max-w-lg">
