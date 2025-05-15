@@ -6,7 +6,7 @@ const BannerLp = () => {
   return (
     <section className="py-10 lg:py-[70px] bg-[url('/goldlp/bg-1.svg')] bg-cover bg-center text-center md:h-[850px]">
     <div className="max-w-[1380px] mx-auto px-4">
-      <div className="bg-[url('/goldlp/bg-2.svg')] bg-cover bg-center bg-no-repeat md:h-[650px] border border-gray-100 border-opacity-10">
+      <div className="bg-[url('/goldlp/bggold.webp')] bg-cover bg-center bg-no-repeat md:h-[650px] border border-gray-100 border-opacity-10">
         <div className="grid grid-cols-3 gap-8 items-center h-full">
           {/* Content Area - spans 2 columns */}
           <div

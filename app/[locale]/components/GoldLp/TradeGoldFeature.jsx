@@ -23,13 +23,13 @@ const features = [
 
 const TradeGoldFeatures = () => {
   return (
-    <section className="bg-whitepy-12 md:py-16 text-center relative overflow-hidden">
+    <section className="bg-white py-12 md:py-16 text-center relative overflow-hidden">
 
       <h2 className="text-2xl md:text-3xl font-bold text-[#0b1244] mb-20 px-5">
         Trade gold like it’s meant to be.
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-20 md:gap-12 max-w-5xl mx-auto relative z-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-20 md:gap-12 max-w-5xl mx-auto px-5 md:px-0 relative z-10">
         {features.map((item, index) => (
           <div
             key={index}
