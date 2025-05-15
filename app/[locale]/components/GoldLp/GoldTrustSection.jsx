@@ -35,7 +35,7 @@ const GoldTrustSection = () => {
         </div>
 
         {/* RIGHT (Image will appear first on mobile) */}
-        <div className="relative w-full h-[400px] md:h-[550px] rounded-xl overflow-hidden">
+        <div className="relative w-full h-[300px] md:h-[500px] rounded-xl overflow-hidden">
           <Image
             src="/goldlp/imagez.webp"
             alt="Gold Trading Visual"

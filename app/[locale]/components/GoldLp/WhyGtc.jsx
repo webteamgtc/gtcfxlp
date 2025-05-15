@@ -9,7 +9,7 @@ const WhyChooseGTC = () => {
                 <p className="text text-base max-w-3xl mx-auto mb-12 text-white leading-7">
                 Join a gold trading platform that offers more than just low spreads. At GTC, we combine institutional-grade pricing, pro-level platforms, and lightning-fast execution to give gold traders the edge they need to thrive. Here's why traders trust us:
                 </p>
-                <div className='relative w-full h-52 md:h-[500px]'>
+                <div className='relative w-full h-52 md:h-[400px]'>
                     <Image src="/goldlp/banner-2.webp" alt="Trading screen" fill className="object-contain" />
                 </div>
                
