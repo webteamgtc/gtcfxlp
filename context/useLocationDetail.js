@@ -1,9 +1,10 @@
+"use client"
 import { useEffect, useState } from "react"
 
 export const useLocationDetail = () => {
     const [countryCode, setCountryCode] = useState(null);
     const [countryData, setCountryData] = useState(null)
-    
+
     useEffect(() => {
         const fetchGeoInfo = async () => {
             fetch('https://ipinfo.io/json')

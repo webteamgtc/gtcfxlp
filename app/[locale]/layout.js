@@ -1,6 +1,5 @@
 import "../globals.css";
-import "aos/dist/aos.css";
-import { NextIntlClientProvider, createTranslator } from "next-intl";
+ import { NextIntlClientProvider, createTranslator } from "next-intl";
 import { notFound } from "next/navigation";
 import localFont from "@next/font/local";
 import "react-toastify/dist/ReactToastify.css";

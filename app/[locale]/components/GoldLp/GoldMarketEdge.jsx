@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import LiveAccountButton from '../liveAccountButton';
 
@@ -55,8 +54,8 @@ const GoldMarketEdge = () => {
         </div>
 
         <div className="text-center pt-8">
-        <LiveAccountButton />
-      </div>
+          <LiveAccountButton />
+        </div>
 
       </div>
     </section>

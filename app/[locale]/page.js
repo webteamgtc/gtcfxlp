@@ -1,6 +1,5 @@
 import { createTranslator } from "next-intl";
-import "aos/dist/aos.css";
-import DemoAccountPage from './free-demo-account/page'
+ import DemoAccountPage from './free-demo-account/page'
 
 export async function generateMetadata({ params: { locale } }) {
   const messages = (await import(`../../messages/en.json`)).default;

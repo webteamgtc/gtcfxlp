@@ -1,6 +1,9 @@
 'use client'
 import React from 'react'
-import MainForm from '../../free-demo-account/form'
+ import dynamic from 'next/dynamic';
+
+const MainForm = dynamic(() => import('../../free-demo-account/form'), { ssr: false });
+
 
 const BannerLp = () => {
   return (
@@ -11,7 +14,6 @@ const BannerLp = () => {
           {/* Content Area - spans 2 columns */}
           <div
             className="col-span-3 md:col-span-2 text-left text-white"
-         
           >
             <div className='max-w-3xl  px-6 pt-6 md:p-14 '> <h1 className="text-[28px] md:text-[48px] lg:text-[60px] capitalize leading-tight md:leading-[65px] lg:leading-[65px]">
               Maximize your profits with tight spreads and fast execution on every 

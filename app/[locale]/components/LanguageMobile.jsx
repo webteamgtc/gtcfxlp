@@ -5,8 +5,7 @@ import { MdOutlineLogin } from "react-icons/md";
 import { useLocale } from "next-intl";
 import Link from "next-intl/link";
 import { useRouter } from "next-intl/client";
-import { useDetectClickOutside } from "react-detect-click-outside";
-import { useTranslations } from "next-intl";
+ import { useTranslations } from "next-intl";
 import { RxCross2 } from "react-icons/rx";
 import Image from "next/image";
 import { FaAngleDown } from "react-icons/fa6";
@@ -18,19 +17,14 @@ export default function LanguageMobile(props) {
 
   const pathnameWithoutLocale = pathname.replace(`/${locale}`, "");
   const [open, setOpen] = useState(false);
-  const t = useTranslations("navigation");
-  const ref = useDetectClickOutside({
-    onTriggered: () => {
-      setOpen(false);
-    },
-  });
+ 
   const languages = [
     { code: "en", label: "English", flagSrc: "/en.webp" },
    
     // Add more languages as needed
   ];
   return (
-    <Popover className="" ref={ref}>
+    <Popover className="" >
       <Popover.Button
         // className="inline-flex items-center border border-[#ccc] rounded-none p-1 bg-primary text-white"
         className="bg-white text-primary border border-gray-200 p-[4px] text-sm flex justify-start items-center gap-2 cursor-pointer capitalize"

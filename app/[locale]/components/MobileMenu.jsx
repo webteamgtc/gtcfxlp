@@ -5,7 +5,6 @@ import { MdOutlineLogin } from "react-icons/md";
 import { useLocale } from "next-intl";
 import Link from "next/link";
 import { useRouter } from "next-intl/client";
-import { useDetectClickOutside } from "react-detect-click-outside";
 import { useTranslations } from "next-intl";
 import { RxCross2 } from "react-icons/rx";
 
@@ -15,14 +14,10 @@ export default function MobileMenu(props) {
   const locale = useLocale();
   const [open, setOpen] = useState(false);
   const t = useTranslations("navigation");
-  const ref = useDetectClickOutside({
-    onTriggered: () => {
-      setOpen(false);
-    },
-  });
+
 
   return (
-    <Popover className="" ref={ref}>
+    <Popover className="" >
       <Popover.Button
         className="inline-flex items-center border border-[#ccc] rounded-none p-1 bg-primary text-white"
         onClick={() => {
@@ -65,7 +60,7 @@ export default function MobileMenu(props) {
                 target="_blank"
                 className="uppercase border border-[#29a643] hover:bg-primary hover:text-white  text-[11px] px-3 py-[6px] md:flex gap-2 items-center"
               >
-                 {t("tobbar.account")}
+                {t("tobbar.account")}
               </Link>
               {/* Ensure any other link you want to add border styling to is updated similarly */}
             </div>

@@ -17,8 +17,7 @@ import { TfiWrite } from "react-icons/tfi";
 import { FiBriefcase, FiGitPullRequest } from "react-icons/fi";
 import { BiAnalyse } from "react-icons/bi";
 import { MdOutlineLogin } from "react-icons/md";
-import { useDetectClickOutside } from "react-detect-click-outside";
-import LocationContextProvider from "@/context/location-context";
+ import LocationContextProvider from "@/context/location-context";
 import LanguageMobile from "./LanguageMobile";
 import { TbSpeakerphone } from "react-icons/tb";
 import TopBar from "./Topbar";
@@ -201,11 +200,6 @@ const Header = ({currentLanguage}) => {
     }
   }, [pathname]);
 
-  const ref = useDetectClickOutside({
-    onTriggered: () => {
-      setShow("");
-    },
-  });
 
   return (
     <LocationContextProvider>
