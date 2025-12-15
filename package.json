@@ -20,7 +20,7 @@
     "formik": "^2.4.5",
     "i18n-iso-countries": "^7.14.0",
     "mssql": "^11.0.1",
-    "next": "^14.2.15",
+    "next": "14.2.35",
     "next-intl": "^2.20.2",
     "next-sitemap": "^4.2.3",
     "nodemailer": "^6.9.7",
